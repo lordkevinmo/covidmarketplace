@@ -16,3 +16,4 @@ struct AutoComplete : Codable{
     var postalCode: String? = nil
     var isoCode: String? = nil
 }
+

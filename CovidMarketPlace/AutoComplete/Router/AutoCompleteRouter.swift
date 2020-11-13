@@ -22,6 +22,4 @@ class AutoCompleteRouter: NSObject, AutoCompleteRouterInput {
         router.viewController = view
         return view
     }
-    
-    
 }

@@ -25,13 +25,13 @@ class LandingContentView: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter.viewDidLoad()
         initView()
+        presenter.viewDidLoad()
     }
 
     @IBAction func callActionBtnDidTap(_ sender: UIButton) {
         if landing.index == .two {
-            print("Go to location page")
+            presenter.showLocation()
         }
     }
 }
@@ -39,16 +39,20 @@ class LandingContentView: UIViewController {
 // MARK: - Methods
 extension LandingContentView {
     private func populateView(with landing: Landings) {
-        DispatchQueue.main.async {
+        DispatchQueue.main.async { [unowned self] in
             self.titleLabel.text = landing.page.title
             self.messageLabel.text = landing.page.message
             self.illustration.image = landing.page.image
             self.callActionBtn.setTitle(landing.page.callAction, for: .normal)
+            if landing.index == .two {
+                self.callActionBtn.isHidden = false
+            }
         }
     }
     
     private func initView() {
-        callActionBtn.layer.cornerRadius = 32
+        callActionBtn.layer.cornerRadius = 24
+        self.callActionBtn.isHidden = true
     }
 }
 
