@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Launcher View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="LauncherViewController" customModule="CovidMarketPlace" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="JNr-ks-gKV">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                <color key="color" name="AccentColor"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="JNr-ks-gKV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="6kd-MO-HcZ"/>
+                            <constraint firstItem="JNr-ks-gKV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Cai-6j-ECM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="indicator" destination="JNr-ks-gKV" id="KF7-VE-YRK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-365" y="97"/>
+        </scene>
+        <!--Landing View-->
+        <scene sceneID="9sg-IJ-z6Q">
+            <objects>
+                <pageViewController storyboardIdentifier="landing-screeen" autoresizesArchivedViewToFullSize="NO" modalPresentationStyle="fullScreen" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="scc-Av-z5O" customClass="LandingView" customModule="CovidMarketPlace" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zWu-Xd-O3R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="406" y="96"/>
+        </scene>
+        <!--Landing Content View-->
+        <scene sceneID="Vch-FC-QSx">
+            <objects>
+                <viewController storyboardIdentifier="landing-content" id="QIM-L7-EHc" customClass="LandingContentView" customModule="CovidMarketPlace" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mWY-sq-5av">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="pcmarket" translatesAutoresizingMaskIntoConstraints="NO" id="2Ha-ep-p6C">
+                                <rect key="frame" x="8" y="284.5" width="398" height="327"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SHOP'nTAKE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mHR-ZW-duh">
+                                <rect key="frame" x="8" y="76" width="398" height="37"/>
+                                <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to your marketplace. Let's shop!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VWc-EM-crb">
+                                <rect key="frame" x="8" y="129" width="398" height="25"/>
+                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VA1-GC-ISs">
+                                <rect key="frame" x="32" y="782" width="350" height="48"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="WJ6-Mp-btn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="24"/>
+                                <state key="normal" title="Continue">
+                                    <color key="titleColor" name="AccentColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="callActionBtnDidTap:" destination="QIM-L7-EHc" eventType="touchUpInside" id="lFv-JY-viJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="9MA-iE-q8h"/>
+                        <color key="backgroundColor" name="colorPrimary"/>
+                        <constraints>
+                            <constraint firstItem="2Ha-ep-p6C" firstAttribute="centerY" secondItem="mWY-sq-5av" secondAttribute="centerY" id="DON-Mt-Xuc"/>
+                            <constraint firstItem="mHR-ZW-duh" firstAttribute="top" secondItem="9MA-iE-q8h" secondAttribute="top" constant="32" id="HUO-mj-U6r"/>
+                            <constraint firstItem="9MA-iE-q8h" firstAttribute="trailing" secondItem="mHR-ZW-duh" secondAttribute="trailing" constant="8" id="IoF-wT-3dI"/>
+                            <constraint firstItem="9MA-iE-q8h" firstAttribute="bottom" secondItem="VA1-GC-ISs" secondAttribute="bottom" constant="32" id="S4k-od-tKw"/>
+                            <constraint firstItem="VWc-EM-crb" firstAttribute="leading" secondItem="9MA-iE-q8h" secondAttribute="leading" constant="8" id="VR7-IF-ZRu"/>
+                            <constraint firstItem="VWc-EM-crb" firstAttribute="top" secondItem="mHR-ZW-duh" secondAttribute="bottom" constant="16" id="WMC-cB-rLO"/>
+                            <constraint firstItem="9MA-iE-q8h" firstAttribute="trailing" secondItem="VWc-EM-crb" secondAttribute="trailing" constant="8" id="aOt-SK-yVy"/>
+                            <constraint firstItem="mHR-ZW-duh" firstAttribute="leading" secondItem="9MA-iE-q8h" secondAttribute="leading" constant="8" id="aTH-h3-flY"/>
+                            <constraint firstAttribute="trailing" secondItem="2Ha-ep-p6C" secondAttribute="trailing" constant="8" id="hQY-tc-FJb"/>
+                            <constraint firstItem="2Ha-ep-p6C" firstAttribute="leading" secondItem="mWY-sq-5av" secondAttribute="leading" constant="8" id="pOc-wt-fJJ"/>
+                            <constraint firstItem="VA1-GC-ISs" firstAttribute="leading" secondItem="9MA-iE-q8h" secondAttribute="leading" constant="32" id="rzf-lz-P8z"/>
+                            <constraint firstItem="9MA-iE-q8h" firstAttribute="trailing" secondItem="VA1-GC-ISs" secondAttribute="trailing" constant="32" id="vWx-Iu-rJj"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="callActionBtn" destination="VA1-GC-ISs" id="GMm-q3-ac0"/>
+                        <outlet property="illustration" destination="2Ha-ep-p6C" id="hjr-5j-Txp"/>
+                        <outlet property="messageLabel" destination="VWc-EM-crb" id="eQC-ml-Ahi"/>
+                        <outlet property="titleLabel" destination="mHR-ZW-duh" id="ujY-TY-i21"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7bz-Gc-0cB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1152" y="96"/>
+        </scene>
+        <!--Place View-->
+        <scene sceneID="Us5-96-2OK">
+            <objects>
+                <viewController storyboardIdentifier="place-view" id="VX6-id-njl" customClass="PlaceView" customModule="CovidMarketPlace" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xbf-mI-x5s">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="One More Thing" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQT-Ga-Vbn">
+                                <rect key="frame" x="8" y="68" width="398" height="29.5"/>
+                                <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Activate your location or type the name of your city." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GZt-Ry-5cX">
+                                <rect key="frame" x="8" y="113.5" width="398" height="49.5"/>
+                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WBh-Tr-9dF">
+                                <rect key="frame" x="8" y="195" width="398" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="7vz-Eb-PbV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="street-address"/>
+                                <connections>
+                                    <action selector="placeTxtfieldDidTouched:" destination="VX6-id-njl" eventType="editingDidBegin" id="EFe-Am-MXF"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bth-qp-pOp">
+                                <rect key="frame" x="48" y="766" width="318" height="48"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="RDB-BV-kvn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="20"/>
+                                <state key="normal" title="Go Shopping 😃">
+                                    <color key="titleColor" name="AccentColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="actionBtnDidTapped:" destination="VX6-id-njl" eventType="touchUpInside" id="Lbe-F9-jhg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ADB-UJ-4k4"/>
+                        <color key="backgroundColor" name="colorPrimary"/>
+                        <constraints>
+                            <constraint firstItem="WBh-Tr-9dF" firstAttribute="top" secondItem="GZt-Ry-5cX" secondAttribute="bottom" constant="32" id="AvR-o7-PkL"/>
+                            <constraint firstItem="ADB-UJ-4k4" firstAttribute="trailing" secondItem="aQT-Ga-Vbn" secondAttribute="trailing" constant="8" id="DSy-7e-KaE"/>
+                            <constraint firstItem="GZt-Ry-5cX" firstAttribute="leading" secondItem="ADB-UJ-4k4" secondAttribute="leading" constant="8" id="Gih-9K-bPs"/>
+                            <constraint firstItem="bth-qp-pOp" firstAttribute="leading" secondItem="ADB-UJ-4k4" secondAttribute="leading" constant="48" id="RpH-QB-FP7"/>
+                            <constraint firstItem="aQT-Ga-Vbn" firstAttribute="top" secondItem="ADB-UJ-4k4" secondAttribute="top" constant="24" id="W4x-mx-0mY"/>
+                            <constraint firstItem="ADB-UJ-4k4" firstAttribute="trailing" secondItem="bth-qp-pOp" secondAttribute="trailing" constant="48" id="ZWb-Wj-j8w"/>
+                            <constraint firstItem="aQT-Ga-Vbn" firstAttribute="leading" secondItem="ADB-UJ-4k4" secondAttribute="leading" constant="8" id="cTK-W6-dxN"/>
+                            <constraint firstItem="GZt-Ry-5cX" firstAttribute="top" secondItem="aQT-Ga-Vbn" secondAttribute="bottom" constant="16" id="fvx-oY-VzY"/>
+                            <constraint firstItem="ADB-UJ-4k4" firstAttribute="trailing" secondItem="WBh-Tr-9dF" secondAttribute="trailing" constant="8" id="hw0-f6-hKn"/>
+                            <constraint firstAttribute="trailing" secondItem="GZt-Ry-5cX" secondAttribute="trailing" constant="8" id="lBe-0q-Pab"/>
+                            <constraint firstItem="ADB-UJ-4k4" firstAttribute="bottom" secondItem="bth-qp-pOp" secondAttribute="bottom" constant="48" id="wce-ew-06n"/>
+                            <constraint firstItem="WBh-Tr-9dF" firstAttribute="leading" secondItem="ADB-UJ-4k4" secondAttribute="leading" constant="8" id="xB4-wZ-nw1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="actionBtn" destination="bth-qp-pOp" id="byy-wH-guE"/>
+                        <outlet property="actionMessage" destination="GZt-Ry-5cX" id="dNp-YX-feN"/>
+                        <outlet property="pageTitle" destination="aQT-Ga-Vbn" id="YQ9-ri-piV"/>
+                        <outlet property="placeTxtField" destination="WBh-Tr-9dF" id="62M-aB-JOx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yPO-6d-7R0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1870" y="96"/>
+        </scene>
+        <!--Auto Complete View-->
+        <scene sceneID="kq4-mS-Wb6">
+            <objects>
+                <tableViewController storyboardIdentifier="place-autocomplete" id="Fs5-nl-msM" customClass="AutoCompleteView" customModule="CovidMarketPlace" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="mTs-Kw-KKN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <connections>
+                            <outlet property="dataSource" destination="Fs5-nl-msM" id="iAK-T9-WuB"/>
+                            <outlet property="delegate" destination="Fs5-nl-msM" id="S9Z-Qn-Tkm"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nA8-eK-piE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1870" y="-573"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pcmarket" width="466.5" height="326.5"/>
+        <namedColor name="AccentColor">
+            <color red="0.25098039215686274" green="0.4392156862745098" blue="0.46666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="colorPrimary">
+            <color red="0.078431372549019607" green="0.60784313725490191" blue="0.73333333333333328" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
