@@ -18,6 +18,9 @@ class LandingContentRouter: NSObject, LandingContentRouterInput {
     
     func redirectToLocation() {
         // Implement view redirection
+        viewController?.show(
+            LocationLauncherRouter.assembleModule(),
+            sender: viewController.self)
     }
     
     static func assembleModule(with landing: Landings) -> UIViewController {

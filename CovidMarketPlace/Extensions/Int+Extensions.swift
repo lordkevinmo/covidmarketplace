@@ -10,3 +10,10 @@ import Foundation
 extension Int {
     static let two = 2
 }
+
+// Int + tabbar item number
+extension Int {
+    static let HOMEBAR = 0
+    static let FAVBAR = 1
+    static let ACCOUNTBAR = 2
+}
