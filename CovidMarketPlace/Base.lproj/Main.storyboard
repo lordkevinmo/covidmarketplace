@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -40,7 +40,7 @@
         <!--Landing View-->
         <scene sceneID="9sg-IJ-z6Q">
             <objects>
-                <pageViewController storyboardIdentifier="landing-screeen" autoresizesArchivedViewToFullSize="NO" modalPresentationStyle="fullScreen" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="scc-Av-z5O" customClass="LandingView" customModule="CovidMarketPlace" customModuleProvider="target" sceneMemberID="viewController"/>
+                <pageViewController storyboardIdentifier="landing-screeen" autoresizesArchivedViewToFullSize="NO" modalPresentationStyle="fullScreen" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="scc-Av-z5O" customClass="LandingView" customModule="CovidMarketPlace" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zWu-Xd-O3R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="406" y="96"/>
@@ -111,10 +111,38 @@
             </objects>
             <point key="canvasLocation" x="1152" y="96"/>
         </scene>
+        <!--Location Launcher-->
+        <scene sceneID="gwx-2T-Tot">
+            <objects>
+                <viewController storyboardIdentifier="location-launcher" modalPresentationStyle="fullScreen" id="3Rf-ly-QNn" customClass="LocationLauncher" customModule="CovidMarketPlace" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KCT-Kp-75I">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="fNK-Xp-ctC">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                <color key="color" name="colorPrimary"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="548-fs-R0y"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fNK-Xp-ctC" firstAttribute="centerY" secondItem="KCT-Kp-75I" secondAttribute="centerY" id="JeV-Ig-1J0"/>
+                            <constraint firstItem="fNK-Xp-ctC" firstAttribute="centerX" secondItem="KCT-Kp-75I" secondAttribute="centerX" id="Svb-Q4-WHk"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="indicator" destination="fNK-Xp-ctC" id="sIY-0w-Wn8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gsf-ub-n0L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1151" y="780"/>
+        </scene>
         <!--Place View-->
         <scene sceneID="Us5-96-2OK">
             <objects>
-                <viewController storyboardIdentifier="place-view" id="VX6-id-njl" customClass="PlaceView" customModule="CovidMarketPlace" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="place-view" modalPresentationStyle="fullScreen" id="VX6-id-njl" customClass="PlaceView" customModule="CovidMarketPlace" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xbf-mI-x5s">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -133,6 +161,7 @@
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WBh-Tr-9dF">
                                 <rect key="frame" x="8" y="195" width="398" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="7vz-Eb-PbV"/>
                                 </constraints>
@@ -185,6 +214,196 @@
             </objects>
             <point key="canvasLocation" x="1870" y="96"/>
         </scene>
+        <!--Main View Controller-->
+        <scene sceneID="2qQ-eS-pbZ">
+            <objects>
+                <tabBarController storyboardIdentifier="main-controller" modalPresentationStyle="fullScreen" id="fMs-g2-ecA" customClass="MainViewController" customModule="CovidMarketPlace" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gFe-KS-eW4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" name="AccentColor"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="qKK-5U-S74" kind="relationship" relationship="viewControllers" id="X2u-WT-TPE"/>
+                        <segue destination="sI4-sJ-cDb" kind="relationship" relationship="viewControllers" id="fkC-2z-yeu"/>
+                        <segue destination="jRI-lR-gS0" kind="relationship" relationship="viewControllers" id="HMY-X2-RoZ"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DHP-fH-lZE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2729" y="96"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="kDH-FJ-HcJ">
+            <objects>
+                <navigationController modalPresentationStyle="fullScreen" id="qKK-5U-S74" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" selectedImage="house.fill" id="2xi-0w-0ag"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="GcT-ib-TzP">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="i6a-6c-IRK" kind="relationship" relationship="rootViewController" id="OMl-6v-7RL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dgi-Wk-8Gh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3622" y="-607"/>
+        </scene>
+        <!--Home View-->
+        <scene sceneID="XbT-vk-RfJ">
+            <objects>
+                <viewController storyboardIdentifier="home-view" id="i6a-6c-IRK" customClass="HomeView" customModule="CovidMarketPlace" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="V43-nt-bqy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" placeholder="Research your favorite market" translatesAutoresizingMaskIntoConstraints="NO" id="eb2-4Z-jtI">
+                                <rect key="frame" x="0.0" y="88" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QC2-5u-m4W">
+                                <rect key="frame" x="0.0" y="144" width="414" height="669"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ba9-p5-NNf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="eb2-4Z-jtI" firstAttribute="top" secondItem="ba9-p5-NNf" secondAttribute="top" id="2PX-2Z-8aK"/>
+                            <constraint firstItem="eb2-4Z-jtI" firstAttribute="leading" secondItem="ba9-p5-NNf" secondAttribute="leading" id="IAR-NX-UCn"/>
+                            <constraint firstItem="QC2-5u-m4W" firstAttribute="trailing" secondItem="ba9-p5-NNf" secondAttribute="trailing" id="YU9-Xz-UlD"/>
+                            <constraint firstItem="eb2-4Z-jtI" firstAttribute="trailing" secondItem="ba9-p5-NNf" secondAttribute="trailing" id="eUQ-WZ-Z23"/>
+                            <constraint firstItem="QC2-5u-m4W" firstAttribute="leading" secondItem="ba9-p5-NNf" secondAttribute="leading" id="pHt-eX-Un6"/>
+                            <constraint firstItem="QC2-5u-m4W" firstAttribute="bottom" secondItem="ba9-p5-NNf" secondAttribute="bottom" id="tUU-NK-GUM"/>
+                            <constraint firstItem="QC2-5u-m4W" firstAttribute="top" secondItem="eb2-4Z-jtI" secondAttribute="bottom" id="ytf-FS-jaD"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="63z-bo-6bh"/>
+                    <connections>
+                        <outlet property="container" destination="QC2-5u-m4W" id="oMi-55-dbE"/>
+                        <outlet property="searchBar" destination="eb2-4Z-jtI" id="gk4-7Y-1PP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VlQ-gW-M0N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4395.652173913044" y="-607.36607142857144"/>
+        </scene>
+        <!--Favorites-->
+        <scene sceneID="Wr1-uu-pHv">
+            <objects>
+                <navigationController modalPresentationStyle="fullScreen" id="sI4-sJ-cDb" customClass="FavoritesLauncher" customModule="CovidMarketPlace" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Favorites" image="heart" catalog="system" selectedImage="heart.fill" id="3cn-EX-dvg"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tvA-iZ-tUj">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="9hL-L6-qzO" kind="relationship" relationship="rootViewController" id="ibU-Xa-355"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Thb-1G-Eru" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3623" y="96"/>
+        </scene>
+        <!--Favorites View-->
+        <scene sceneID="AC1-l4-lvY">
+            <objects>
+                <viewController storyboardIdentifier="favorite-view" id="9hL-L6-qzO" customClass="FavoritesView" customModule="CovidMarketPlace" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="C9y-W8-qAR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="o8y-Ug-M2e"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="M5Z-44-VgI"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8D9-sa-fCU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4396" y="96"/>
+        </scene>
+        <!--Favorite Empty-->
+        <scene sceneID="HtJ-wo-NVT">
+            <objects>
+                <viewController storyboardIdentifier="favorite-empty" id="5MC-Hp-bVp" customClass="FavoriteEmpty" customModule="CovidMarketPlace" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9cc-oa-S7h">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="broken-heart" translatesAutoresizingMaskIntoConstraints="NO" id="u15-QC-Wa2">
+                                <rect key="frame" x="8" y="265.5" width="398" height="365"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have any favorite now 💔" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5k5-3l-Vtk">
+                                <rect key="frame" x="8" y="646.5" width="398" height="29.5"/>
+                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="24"/>
+                                <color key="textColor" name="colorPrimary"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feel free to add both market and product to favorite :)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dNf-5Z-8MF">
+                                <rect key="frame" x="8" y="692" width="398" height="44.5"/>
+                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="18"/>
+                                <color key="textColor" name="AccentColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="V0b-NZ-OxM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="V0b-NZ-OxM" firstAttribute="trailing" secondItem="5k5-3l-Vtk" secondAttribute="trailing" constant="8" id="4Zh-37-q3v"/>
+                            <constraint firstItem="5k5-3l-Vtk" firstAttribute="top" secondItem="u15-QC-Wa2" secondAttribute="bottom" constant="16" id="91c-Wo-udY"/>
+                            <constraint firstItem="5k5-3l-Vtk" firstAttribute="leading" secondItem="V0b-NZ-OxM" secondAttribute="leading" constant="8" id="DQx-SK-gRc"/>
+                            <constraint firstItem="u15-QC-Wa2" firstAttribute="centerY" secondItem="9cc-oa-S7h" secondAttribute="centerY" id="Md2-zg-160"/>
+                            <constraint firstItem="V0b-NZ-OxM" firstAttribute="trailing" secondItem="u15-QC-Wa2" secondAttribute="trailing" constant="8" id="NOt-0f-nNi"/>
+                            <constraint firstItem="u15-QC-Wa2" firstAttribute="leading" secondItem="V0b-NZ-OxM" secondAttribute="leading" constant="8" id="RiS-Zw-1jz"/>
+                            <constraint firstItem="dNf-5Z-8MF" firstAttribute="top" secondItem="5k5-3l-Vtk" secondAttribute="bottom" constant="16" id="RnZ-gD-zBa"/>
+                            <constraint firstItem="V0b-NZ-OxM" firstAttribute="trailing" secondItem="dNf-5Z-8MF" secondAttribute="trailing" constant="8" id="VnW-wg-Gyx"/>
+                            <constraint firstItem="dNf-5Z-8MF" firstAttribute="leading" secondItem="V0b-NZ-OxM" secondAttribute="leading" constant="8" id="X5o-KQ-0UE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="favMsg" destination="dNf-5Z-8MF" id="gdB-gC-4Ye"/>
+                        <outlet property="favTitle" destination="5k5-3l-Vtk" id="Fcc-Vt-xvt"/>
+                        <outlet property="icon" destination="u15-QC-Wa2" id="ejO-iN-J7V"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z0C-Zz-bds" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5211.594202898551" y="95.758928571428569"/>
+        </scene>
+        <!--Account-->
+        <scene sceneID="xTp-vO-fs7">
+            <objects>
+                <navigationController storyboardIdentifier="account-launcher" modalPresentationStyle="fullScreen" id="jRI-lR-gS0" customClass="AccountLauncher" customModule="CovidMarketPlace" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Account" image="person" catalog="system" selectedImage="person.fill" id="ITu-Iq-9PO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yfJ-rZ-gQQ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="oN3-ca-vsB" kind="relationship" relationship="rootViewController" id="FqJ-xS-WH7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YZh-Qr-QSS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3622" y="823"/>
+        </scene>
+        <!--Account View-->
+        <scene sceneID="oxc-Zk-J9b">
+            <objects>
+                <viewController storyboardIdentifier="account-view" id="oN3-ca-vsB" customClass="AccountView" customModule="CovidMarketPlace" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8Rs-5a-k1v">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="ZzV-on-zdt"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Yaq-Wf-ENn"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l7c-FT-sH2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4396" y="823"/>
+        </scene>
         <!--Auto Complete View-->
         <scene sceneID="kq4-mS-Wb6">
             <objects>
@@ -205,7 +424,14 @@
         </scene>
     </scenes>
     <resources>
+        <image name="broken-heart" width="426.5" height="365"/>
+        <image name="heart" catalog="system" width="128" height="109"/>
+        <image name="heart.fill" catalog="system" width="128" height="109"/>
+        <image name="house" catalog="system" width="128" height="106"/>
+        <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="pcmarket" width="466.5" height="326.5"/>
+        <image name="person" catalog="system" width="128" height="117"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
         <namedColor name="AccentColor">
             <color red="0.25098039215686274" green="0.4392156862745098" blue="0.46666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
