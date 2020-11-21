@@ -3,12 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E823AEC0255ED7CE00CEC763 /* LocationLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = E823AEBF255ED7CE00CEC763 /* LocationLauncher.swift */; };
-		E823AEC3255EDAC200CEC763 /* LocationLauncherRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E823AEC2255EDAC200CEC763 /* LocationLauncherRouter.swift */; };
+		8F3C2A6A5D648EE2DC6F7F44 /* Pods_CovidMarketPlace.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59FA914DAD1F08DFD2665691 /* Pods_CovidMarketPlace.framework */; };
 		E823AEC8255EE96A00CEC763 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E823AEC7255EE96A00CEC763 /* MainViewController.swift */; };
 		E823AECC255EF27700CEC763 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E823AECB255EF27700CEC763 /* HomeView.swift */; };
 		E823AED6255F0DE200CEC763 /* FavoritesLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = E823AED5255F0DE200CEC763 /* FavoritesLauncher.swift */; };
@@ -32,20 +31,38 @@
 		E8336DC2255E083B008A8800 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8336DC1255E083B008A8800 /* View+Extensions.swift */; };
 		E8336DC5255E085B008A8800 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8336DC4255E085B008A8800 /* Color+Extensions.swift */; };
 		E8336DC8255E895A008A8800 /* Notification+Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8336DC7255E895A008A8800 /* Notification+Name.swift */; };
+		E85C7A862567EBD80008BBCA /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85C7A842567EBD80008BBCA /* CategoryCell.swift */; };
+		E85C7A872567EBD80008BBCA /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E85C7A852567EBD80008BBCA /* CategoryCell.xib */; };
+		E85C7A8B2567F15B0008BBCA /* AdsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85C7A892567F15B0008BBCA /* AdsCell.swift */; };
+		E85C7A8C2567F15B0008BBCA /* AdsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E85C7A8A2567F15B0008BBCA /* AdsCell.xib */; };
+		E85C7A902567F2270008BBCA /* OffersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85C7A8E2567F2270008BBCA /* OffersCell.swift */; };
+		E85C7A912567F2270008BBCA /* OffersCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E85C7A8F2567F2270008BBCA /* OffersCell.xib */; };
+		E85C7A962567F35F0008BBCA /* BrandInsightCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85C7A942567F35F0008BBCA /* BrandInsightCell.swift */; };
+		E85C7A972567F35F0008BBCA /* BrandInsightCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E85C7A952567F35F0008BBCA /* BrandInsightCell.xib */; };
+		E85C7A9B2567F4150008BBCA /* GoodSuggestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85C7A992567F4150008BBCA /* GoodSuggestionCell.swift */; };
+		E85C7A9C2567F4150008BBCA /* GoodSuggestionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E85C7A9A2567F4150008BBCA /* GoodSuggestionCell.xib */; };
+		E85C7AA02567F9D00008BBCA /* ShopCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85C7A9E2567F9D00008BBCA /* ShopCell.swift */; };
+		E85C7AA12567F9D00008BBCA /* ShopCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E85C7A9F2567F9D00008BBCA /* ShopCell.xib */; };
+		E85C7AB12568128E0008BBCA /* LauncherController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85C7AB02568128E0008BBCA /* LauncherController.swift */; };
+		E85C7ABA256814360008BBCA /* AuthRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85C7AB9256814360008BBCA /* AuthRouter.swift */; };
+		E85C7ABE256814540008BBCA /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85C7ABD256814540008BBCA /* Auth.swift */; };
+		E85C7AC1256814680008BBCA /* AuthPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85C7AC0256814680008BBCA /* AuthPresenter.swift */; };
+		E85C7AC4256814770008BBCA /* AuthInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85C7AC3256814770008BBCA /* AuthInteractor.swift */; };
+		E85C7ACF25683A3A0008BBCA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E85C7ACE25683A3A0008BBCA /* GoogleService-Info.plist */; };
+		E85EC17E256708EB00B57732 /* UIImageview+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85EC17D256708EB00B57732 /* UIImageview+Extensions.swift */; };
 		E8DFDADD255B49EE0000AAA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DFDADC255B49EE0000AAA9 /* AppDelegate.swift */; };
 		E8DFDADF255B49EE0000AAA9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DFDADE255B49EE0000AAA9 /* SceneDelegate.swift */; };
-		E8DFDAE1255B49EE0000AAA9 /* LauncherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DFDAE0255B49EE0000AAA9 /* LauncherViewController.swift */; };
+		E8DFDAE1255B49EE0000AAA9 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DFDAE0255B49EE0000AAA9 /* AuthView.swift */; };
 		E8DFDAE4255B49EE0000AAA9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8DFDAE2255B49EE0000AAA9 /* Main.storyboard */; };
 		E8DFDAE7255B49EE0000AAA9 /* CovidMarketPlace.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E8DFDAE5255B49EE0000AAA9 /* CovidMarketPlace.xcdatamodeld */; };
 		E8DFDAE9255B49F00000AAA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8DFDAE8255B49F00000AAA9 /* Assets.xcassets */; };
 		E8DFDAEC255B49F00000AAA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8DFDAEA255B49F00000AAA9 /* LaunchScreen.storyboard */; };
-		E8DFDAF6255BF38C0000AAA9 /* LandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DFDAF5255BF38C0000AAA9 /* LandingView.swift */; };
 		E8DFDB05255BF40A0000AAA9 /* Landings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DFDB04255BF40A0000AAA9 /* Landings.swift */; };
-		E8DFDB0B255BFD850000AAA9 /* LandingContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DFDB0A255BFD850000AAA9 /* LandingContentView.swift */; };
+		E8DFDB0B255BFD850000AAA9 /* SMSVerificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DFDB0A255BFD850000AAA9 /* SMSVerificationView.swift */; };
 		E8DFDB0F255C04E30000AAA9 /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DFDB0E255C04E30000AAA9 /* Int+Extensions.swift */; };
-		E8DFDB12255C0DD40000AAA9 /* LandingContentRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DFDB11255C0DD40000AAA9 /* LandingContentRouter.swift */; };
-		E8DFDB15255C0F150000AAA9 /* LandingContentPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DFDB14255C0F150000AAA9 /* LandingContentPresenter.swift */; };
-		E8DFDB18255C10E80000AAA9 /* LandingContentInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DFDB17255C10E80000AAA9 /* LandingContentInteractor.swift */; };
+		E8DFDB12255C0DD40000AAA9 /* SMSRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DFDB11255C0DD40000AAA9 /* SMSRouter.swift */; };
+		E8DFDB15255C0F150000AAA9 /* SMSPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DFDB14255C0F150000AAA9 /* SMSPresenter.swift */; };
+		E8DFDB18255C10E80000AAA9 /* SMSInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DFDB17255C10E80000AAA9 /* SMSInteractor.swift */; };
 		E8DFDB23255C32A10000AAA9 /* PlaceRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DFDB22255C32A10000AAA9 /* PlaceRouter.swift */; };
 		E8DFDB26255C32B50000AAA9 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DFDB25255C32B50000AAA9 /* Location.swift */; };
 		E8DFDB29255C32C60000AAA9 /* PlacePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DFDB28255C32C60000AAA9 /* PlacePresenter.swift */; };
@@ -55,8 +72,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E823AEBF255ED7CE00CEC763 /* LocationLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationLauncher.swift; sourceTree = "<group>"; };
-		E823AEC2255EDAC200CEC763 /* LocationLauncherRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationLauncherRouter.swift; sourceTree = "<group>"; };
+		59FA914DAD1F08DFD2665691 /* Pods_CovidMarketPlace.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CovidMarketPlace.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEE6626206CA5C4C21BAAEC8 /* Pods-CovidMarketPlace.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CovidMarketPlace.release.xcconfig"; path = "Target Support Files/Pods-CovidMarketPlace/Pods-CovidMarketPlace.release.xcconfig"; sourceTree = "<group>"; };
 		E823AEC7255EE96A00CEC763 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		E823AECB255EF27700CEC763 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		E823AED5255F0DE200CEC763 /* FavoritesLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesLauncher.swift; sourceTree = "<group>"; };
@@ -80,28 +97,47 @@
 		E8336DC1255E083B008A8800 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		E8336DC4255E085B008A8800 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
 		E8336DC7255E895A008A8800 /* Notification+Name.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Name.swift"; sourceTree = "<group>"; };
+		E85C7A842567EBD80008BBCA /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		E85C7A852567EBD80008BBCA /* CategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCell.xib; sourceTree = "<group>"; };
+		E85C7A892567F15B0008BBCA /* AdsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsCell.swift; sourceTree = "<group>"; };
+		E85C7A8A2567F15B0008BBCA /* AdsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdsCell.xib; sourceTree = "<group>"; };
+		E85C7A8E2567F2270008BBCA /* OffersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersCell.swift; sourceTree = "<group>"; };
+		E85C7A8F2567F2270008BBCA /* OffersCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OffersCell.xib; sourceTree = "<group>"; };
+		E85C7A942567F35F0008BBCA /* BrandInsightCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandInsightCell.swift; sourceTree = "<group>"; };
+		E85C7A952567F35F0008BBCA /* BrandInsightCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BrandInsightCell.xib; sourceTree = "<group>"; };
+		E85C7A992567F4150008BBCA /* GoodSuggestionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodSuggestionCell.swift; sourceTree = "<group>"; };
+		E85C7A9A2567F4150008BBCA /* GoodSuggestionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GoodSuggestionCell.xib; sourceTree = "<group>"; };
+		E85C7A9E2567F9D00008BBCA /* ShopCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopCell.swift; sourceTree = "<group>"; };
+		E85C7A9F2567F9D00008BBCA /* ShopCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShopCell.xib; sourceTree = "<group>"; };
+		E85C7AB02568128E0008BBCA /* LauncherController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LauncherController.swift; sourceTree = "<group>"; };
+		E85C7AB9256814360008BBCA /* AuthRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRouter.swift; sourceTree = "<group>"; };
+		E85C7ABD256814540008BBCA /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
+		E85C7AC0256814680008BBCA /* AuthPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthPresenter.swift; sourceTree = "<group>"; };
+		E85C7AC3256814770008BBCA /* AuthInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthInteractor.swift; sourceTree = "<group>"; };
+		E85C7ACE25683A3A0008BBCA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E85EC17D256708EB00B57732 /* UIImageview+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageview+Extensions.swift"; sourceTree = "<group>"; };
 		E8DFDAD9255B49EE0000AAA9 /* CovidMarketPlace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CovidMarketPlace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8DFDADC255B49EE0000AAA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8DFDADE255B49EE0000AAA9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E8DFDAE0255B49EE0000AAA9 /* LauncherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LauncherViewController.swift; sourceTree = "<group>"; };
+		E8DFDAE0255B49EE0000AAA9 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		E8DFDAE3255B49EE0000AAA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E8DFDAE6255B49EE0000AAA9 /* CovidMarketPlace.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CovidMarketPlace.xcdatamodel; sourceTree = "<group>"; };
 		E8DFDAE8255B49F00000AAA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E8DFDAEB255B49F00000AAA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E8DFDAED255B49F00000AAA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E8DFDAF5255BF38C0000AAA9 /* LandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingView.swift; sourceTree = "<group>"; };
 		E8DFDB04255BF40A0000AAA9 /* Landings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Landings.swift; sourceTree = "<group>"; };
-		E8DFDB0A255BFD850000AAA9 /* LandingContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingContentView.swift; sourceTree = "<group>"; };
+		E8DFDB0A255BFD850000AAA9 /* SMSVerificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMSVerificationView.swift; sourceTree = "<group>"; };
 		E8DFDB0E255C04E30000AAA9 /* Int+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extensions.swift"; sourceTree = "<group>"; };
-		E8DFDB11255C0DD40000AAA9 /* LandingContentRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingContentRouter.swift; sourceTree = "<group>"; };
-		E8DFDB14255C0F150000AAA9 /* LandingContentPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingContentPresenter.swift; sourceTree = "<group>"; };
-		E8DFDB17255C10E80000AAA9 /* LandingContentInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingContentInteractor.swift; sourceTree = "<group>"; };
+		E8DFDB11255C0DD40000AAA9 /* SMSRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMSRouter.swift; sourceTree = "<group>"; };
+		E8DFDB14255C0F150000AAA9 /* SMSPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMSPresenter.swift; sourceTree = "<group>"; };
+		E8DFDB17255C10E80000AAA9 /* SMSInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMSInteractor.swift; sourceTree = "<group>"; };
 		E8DFDB22255C32A10000AAA9 /* PlaceRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceRouter.swift; sourceTree = "<group>"; };
 		E8DFDB25255C32B50000AAA9 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		E8DFDB28255C32C60000AAA9 /* PlacePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacePresenter.swift; sourceTree = "<group>"; };
 		E8DFDB2B255C32D30000AAA9 /* PlaceInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceInteractor.swift; sourceTree = "<group>"; };
 		E8DFDB2E255C32EE0000AAA9 /* PlaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceView.swift; sourceTree = "<group>"; };
 		E8DFDB33255C50B70000AAA9 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		EF4C1C676804510A5EAD0966 /* Pods-CovidMarketPlace.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CovidMarketPlace.debug.xcconfig"; path = "Target Support Files/Pods-CovidMarketPlace/Pods-CovidMarketPlace.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,19 +145,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F3C2A6A5D648EE2DC6F7F44 /* Pods_CovidMarketPlace.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E4702C7AADD697C4DC6D7F11 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				59FA914DAD1F08DFD2665691 /* Pods_CovidMarketPlace.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E48E6B7C3AFAD0B2DDD0CF81 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EF4C1C676804510A5EAD0966 /* Pods-CovidMarketPlace.debug.xcconfig */,
+				BEE6626206CA5C4C21BAAEC8 /* Pods-CovidMarketPlace.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		E823AEC6255EE8ED00CEC763 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				E8DFDADC255B49EE0000AAA9 /* AppDelegate.swift */,
 				E8DFDADE255B49EE0000AAA9 /* SceneDelegate.swift */,
-				E8DFDAE0255B49EE0000AAA9 /* LauncherViewController.swift */,
-				E823AEC7255EE96A00CEC763 /* MainViewController.swift */,
+				E85C7AB02568128E0008BBCA /* LauncherController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -236,6 +289,18 @@
 		E823AF04255F294000CEC763 /* cells */ = {
 			isa = PBXGroup;
 			children = (
+				E85C7A892567F15B0008BBCA /* AdsCell.swift */,
+				E85C7A8A2567F15B0008BBCA /* AdsCell.xib */,
+				E85C7A842567EBD80008BBCA /* CategoryCell.swift */,
+				E85C7A852567EBD80008BBCA /* CategoryCell.xib */,
+				E85C7A8E2567F2270008BBCA /* OffersCell.swift */,
+				E85C7A8F2567F2270008BBCA /* OffersCell.xib */,
+				E85C7A942567F35F0008BBCA /* BrandInsightCell.swift */,
+				E85C7A952567F35F0008BBCA /* BrandInsightCell.xib */,
+				E85C7A992567F4150008BBCA /* GoodSuggestionCell.swift */,
+				E85C7A9A2567F4150008BBCA /* GoodSuggestionCell.xib */,
+				E85C7A9E2567F9D00008BBCA /* ShopCell.swift */,
+				E85C7A9F2567F9D00008BBCA /* ShopCell.xib */,
 			);
 			path = cells;
 			sourceTree = "<group>";
@@ -291,6 +356,7 @@
 			children = (
 				E823AF04255F294000CEC763 /* cells */,
 				E823AECB255EF27700CEC763 /* HomeView.swift */,
+				E823AEC7255EE96A00CEC763 /* MainViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -324,11 +390,65 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
+		E85C7AB3256813E40008BBCA /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				E85C7AB8256814210008BBCA /* Router */,
+				E85C7AB7256814190008BBCA /* Entity */,
+				E85C7AB6256814020008BBCA /* Presenter */,
+				E85C7AB5256813F60008BBCA /* Interactor */,
+				E85C7AB4256813F00008BBCA /* View */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		E85C7AB4256813F00008BBCA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E8DFDAE0255B49EE0000AAA9 /* AuthView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E85C7AB5256813F60008BBCA /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				E85C7AC3256814770008BBCA /* AuthInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		E85C7AB6256814020008BBCA /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				E85C7AC0256814680008BBCA /* AuthPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		E85C7AB7256814190008BBCA /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				E85C7ABD256814540008BBCA /* Auth.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		E85C7AB8256814210008BBCA /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				E85C7AB9256814360008BBCA /* AuthRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		E8DFDAD0255B49EE0000AAA9 = {
 			isa = PBXGroup;
 			children = (
 				E8DFDADB255B49EE0000AAA9 /* CovidMarketPlace */,
 				E8DFDADA255B49EE0000AAA9 /* Products */,
+				E48E6B7C3AFAD0B2DDD0CF81 /* Pods */,
+				E4702C7AADD697C4DC6D7F11 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -343,6 +463,7 @@
 		E8DFDADB255B49EE0000AAA9 /* CovidMarketPlace */ = {
 			isa = PBXGroup;
 			children = (
+				E85C7AB3256813E40008BBCA /* Authentication */,
 				E823AEEB255F1F2600CEC763 /* Account */,
 				E8DFDAE8255B49F00000AAA9 /* Assets.xcassets */,
 				E8336DA4255DE6F4008A8800 /* AutoComplete */,
@@ -352,7 +473,8 @@
 				E823AECE255F0D4B00CEC763 /* Favorites */,
 				E8336DB8255DF281008A8800 /* Home */,
 				E8DFDAED255B49F00000AAA9 /* Info.plist */,
-				E8DFDAF4255BF35F0000AAA9 /* Landing */,
+				E85C7ACE25683A3A0008BBCA /* GoogleService-Info.plist */,
+				E8DFDAF4255BF35F0000AAA9 /* SMS */,
 				E8DFDAEA255B49F00000AAA9 /* LaunchScreen.storyboard */,
 				E8DFDAE2255B49EE0000AAA9 /* Main.storyboard */,
 				E8DFDB1C255C323F0000AAA9 /* PlaceLocation */,
@@ -361,7 +483,7 @@
 			path = CovidMarketPlace;
 			sourceTree = "<group>";
 		};
-		E8DFDAF4255BF35F0000AAA9 /* Landing */ = {
+		E8DFDAF4255BF35F0000AAA9 /* SMS */ = {
 			isa = PBXGroup;
 			children = (
 				E8DFDAFD255BF3C40000AAA9 /* Router */,
@@ -370,14 +492,13 @@
 				E8DFDAFA255BF39A0000AAA9 /* Interactor */,
 				E8DFDAF8255BF3920000AAA9 /* View */,
 			);
-			path = Landing;
+			path = SMS;
 			sourceTree = "<group>";
 		};
 		E8DFDAF8255BF3920000AAA9 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				E8DFDAF5255BF38C0000AAA9 /* LandingView.swift */,
-				E8DFDB0A255BFD850000AAA9 /* LandingContentView.swift */,
+				E8DFDB0A255BFD850000AAA9 /* SMSVerificationView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -385,7 +506,7 @@
 		E8DFDAFA255BF39A0000AAA9 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
-				E8DFDB17255C10E80000AAA9 /* LandingContentInteractor.swift */,
+				E8DFDB17255C10E80000AAA9 /* SMSInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -393,7 +514,7 @@
 		E8DFDAFB255BF3AB0000AAA9 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				E8DFDB14255C0F150000AAA9 /* LandingContentPresenter.swift */,
+				E8DFDB14255C0F150000AAA9 /* SMSPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -409,7 +530,7 @@
 		E8DFDAFD255BF3C40000AAA9 /* Router */ = {
 			isa = PBXGroup;
 			children = (
-				E8DFDB11255C0DD40000AAA9 /* LandingContentRouter.swift */,
+				E8DFDB11255C0DD40000AAA9 /* SMSRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -422,6 +543,7 @@
 				E8336DC1255E083B008A8800 /* View+Extensions.swift */,
 				E8336DC4255E085B008A8800 /* Color+Extensions.swift */,
 				E8336DC7255E895A008A8800 /* Notification+Name.swift */,
+				E85EC17D256708EB00B57732 /* UIImageview+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -442,7 +564,6 @@
 			isa = PBXGroup;
 			children = (
 				E8DFDB2E255C32EE0000AAA9 /* PlaceView.swift */,
-				E823AEBF255ED7CE00CEC763 /* LocationLauncher.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -475,7 +596,6 @@
 			isa = PBXGroup;
 			children = (
 				E8DFDB22255C32A10000AAA9 /* PlaceRouter.swift */,
-				E823AEC2255EDAC200CEC763 /* LocationLauncherRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -503,9 +623,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E8DFDAF0255B49F00000AAA9 /* Build configuration list for PBXNativeTarget "CovidMarketPlace" */;
 			buildPhases = (
+				0654D50EF61167BE81890C40 /* [CP] Check Pods Manifest.lock */,
 				E8DFDAD5255B49EE0000AAA9 /* Sources */,
 				E8DFDAD6255B49EE0000AAA9 /* Frameworks */,
 				E8DFDAD7255B49EE0000AAA9 /* Resources */,
+				2E68A707349B30493F6B61D1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -553,58 +675,116 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E85C7A9C2567F4150008BBCA /* GoodSuggestionCell.xib in Resources */,
 				E8DFDAEC255B49F00000AAA9 /* LaunchScreen.storyboard in Resources */,
+				E85C7AA12567F9D00008BBCA /* ShopCell.xib in Resources */,
 				E8DFDAE9255B49F00000AAA9 /* Assets.xcassets in Resources */,
+				E85C7A912567F2270008BBCA /* OffersCell.xib in Resources */,
+				E85C7A972567F35F0008BBCA /* BrandInsightCell.xib in Resources */,
+				E85C7A8C2567F15B0008BBCA /* AdsCell.xib in Resources */,
+				E85C7ACF25683A3A0008BBCA /* GoogleService-Info.plist in Resources */,
 				E8DFDAE4255B49EE0000AAA9 /* Main.storyboard in Resources */,
+				E85C7A872567EBD80008BBCA /* CategoryCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0654D50EF61167BE81890C40 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CovidMarketPlace-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2E68A707349B30493F6B61D1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CovidMarketPlace/Pods-CovidMarketPlace-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CovidMarketPlace/Pods-CovidMarketPlace-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CovidMarketPlace/Pods-CovidMarketPlace-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E8DFDAD5255B49EE0000AAA9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8DFDAE1255B49EE0000AAA9 /* LauncherViewController.swift in Sources */,
+				E8DFDAE1255B49EE0000AAA9 /* AuthView.swift in Sources */,
 				E823AEE6255F0EAC00CEC763 /* FavoriteEmpty.swift in Sources */,
 				E8336DB6255DF260008A8800 /* String+Extensions.swift in Sources */,
+				E85EC17E256708EB00B57732 /* UIImageview+Extensions.swift in Sources */,
 				E823AEDD255F0E2E00CEC763 /* FavoritesInteractor.swift in Sources */,
 				E8336DC8255E895A008A8800 /* Notification+Name.swift in Sources */,
-				E8DFDB15255C0F150000AAA9 /* LandingContentPresenter.swift in Sources */,
+				E8DFDB15255C0F150000AAA9 /* SMSPresenter.swift in Sources */,
+				E85C7A9B2567F4150008BBCA /* GoodSuggestionCell.swift in Sources */,
 				E823AEFC255F213A00CEC763 /* AccountPresenter.swift in Sources */,
 				E8336DB2255DEB15008A8800 /* AutoCompleteRouter.swift in Sources */,
 				E823AED6255F0DE200CEC763 /* FavoritesLauncher.swift in Sources */,
 				E8DFDB23255C32A10000AAA9 /* PlaceRouter.swift in Sources */,
+				E85C7AC1256814680008BBCA /* AuthPresenter.swift in Sources */,
 				E823AEE9255F191000CEC763 /* Favorites.swift in Sources */,
-				E8DFDB18255C10E80000AAA9 /* LandingContentInteractor.swift in Sources */,
+				E8DFDB18255C10E80000AAA9 /* SMSInteractor.swift in Sources */,
 				E823AEF6255F206800CEC763 /* AccountLauncher.swift in Sources */,
 				E823AEFF255F214A00CEC763 /* Account.swift in Sources */,
 				E823AEC8255EE96A00CEC763 /* MainViewController.swift in Sources */,
+				E85C7AB12568128E0008BBCA /* LauncherController.swift in Sources */,
+				E85C7A8B2567F15B0008BBCA /* AdsCell.swift in Sources */,
 				E8DFDB05255BF40A0000AAA9 /* Landings.swift in Sources */,
+				E85C7AA02567F9D00008BBCA /* ShopCell.swift in Sources */,
 				E8336DBF255DF2CB008A8800 /* Merchant.swift in Sources */,
 				E8336DC2255E083B008A8800 /* View+Extensions.swift in Sources */,
 				E823AF02255F215A00CEC763 /* AccountRouter.swift in Sources */,
-				E823AEC0255ED7CE00CEC763 /* LocationLauncher.swift in Sources */,
+				E85C7AC4256814770008BBCA /* AuthInteractor.swift in Sources */,
 				E823AEF2255F1F7700CEC763 /* AccountView.swift in Sources */,
 				E823AEE3255F0E5500CEC763 /* FavoritesRouter.swift in Sources */,
 				E823AEE0255F0E4200CEC763 /* FavoritesPresenter.swift in Sources */,
 				E823AECC255EF27700CEC763 /* HomeView.swift in Sources */,
-				E823AEC3255EDAC200CEC763 /* LocationLauncherRouter.swift in Sources */,
-				E8DFDAF6255BF38C0000AAA9 /* LandingView.swift in Sources */,
+				E85C7ABA256814360008BBCA /* AuthRouter.swift in Sources */,
 				E8DFDB2C255C32D30000AAA9 /* PlaceInteractor.swift in Sources */,
+				E85C7A862567EBD80008BBCA /* CategoryCell.swift in Sources */,
 				E8336DC5255E085B008A8800 /* Color+Extensions.swift in Sources */,
 				E8DFDB26255C32B50000AAA9 /* Location.swift in Sources */,
 				E8DFDADD255B49EE0000AAA9 /* AppDelegate.swift in Sources */,
 				E823AEDA255F0DFC00CEC763 /* FavoritesView.swift in Sources */,
 				E8DFDB34255C50B70000AAA9 /* Utils.swift in Sources */,
+				E85C7A962567F35F0008BBCA /* BrandInsightCell.swift in Sources */,
 				E823AEF9255F20FF00CEC763 /* AccountInteractor.swift in Sources */,
 				E8DFDB29255C32C60000AAA9 /* PlacePresenter.swift in Sources */,
+				E85C7ABE256814540008BBCA /* Auth.swift in Sources */,
+				E85C7A902567F2270008BBCA /* OffersCell.swift in Sources */,
 				E8DFDB2F255C32EE0000AAA9 /* PlaceView.swift in Sources */,
 				E8336DAF255DE7BD008A8800 /* AutoCompleteView.swift in Sources */,
-				E8DFDB12255C0DD40000AAA9 /* LandingContentRouter.swift in Sources */,
+				E8DFDB12255C0DD40000AAA9 /* SMSRouter.swift in Sources */,
 				E8336DAC255DE76E008A8800 /* Autocomplete.swift in Sources */,
-				E8DFDB0B255BFD850000AAA9 /* LandingContentView.swift in Sources */,
+				E8DFDB0B255BFD850000AAA9 /* SMSVerificationView.swift in Sources */,
 				E8DFDB0F255C04E30000AAA9 /* Int+Extensions.swift in Sources */,
 				E8DFDADF255B49EE0000AAA9 /* SceneDelegate.swift in Sources */,
 				E8DFDAE7255B49EE0000AAA9 /* CovidMarketPlace.xcdatamodeld in Sources */,
@@ -684,7 +864,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -739,7 +919,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -751,6 +931,7 @@
 		};
 		E8DFDAF1255B49F00000AAA9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF4C1C676804510A5EAD0966 /* Pods-CovidMarketPlace.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -770,6 +951,7 @@
 		};
 		E8DFDAF2255B49F00000AAA9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BEE6626206CA5C4C21BAAEC8 /* Pods-CovidMarketPlace.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

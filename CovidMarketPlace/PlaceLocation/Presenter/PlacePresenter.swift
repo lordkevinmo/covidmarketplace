@@ -13,8 +13,9 @@ protocol PlacePresenterInput: class {
     var interactor: PlaceInteractorInput! { get set }
     var router: PlaceRouterInput! { get set }
     func viewDidLoad()
-    func getMerchants(by: CLLocation)
-    func getMerchants()
+    func requestLocation()
+    func launchLocationSettings()
+    func redirectToHome(with: String)
 }
 
 class PlacePresenter: PlacePresenterInput {
@@ -28,20 +29,23 @@ class PlacePresenter: PlacePresenterInput {
         interactor.viewDidLoad()
     }
     
-    func getMerchants(by location: CLLocation) {
-        interactor.getMerchants(by: location)
+    func requestLocation() {
+        interactor.requestLocation()
     }
     
-    func getMerchants() {
-        interactor.getMerchants()
+    func launchLocationSettings() {
+        router.requestLocation()
+    }
+    
+    func redirectToHome(with address: String) {
+        router.redirectToHome(with: address)
     }
 }
 
 extension PlacePresenter: PlaceInteractorOutput {
-    func yield(merchants: [Merchant]) {
-        router.redirectToHome(with: merchants)
+    func yield(address: String) {
+        router.redirectToHome(with: address)
     }
-    
     func prepareView() {
         view?.placeIsSetup()
     }
