@@ -14,10 +14,12 @@ protocol PlaceViewInput: class {
 }
 
 class PlaceView: UIViewController {
-    @IBOutlet weak var pageTitle: UILabel!
-    @IBOutlet weak var actionMessage: UILabel!
-    @IBOutlet weak var placeTxtField: UITextField!
-    @IBOutlet weak var actionBtn: UIButton!
+    @IBOutlet weak var greetingsLabel: UILabel!
+    @IBOutlet weak var instructionsLabel: UILabel!
+    @IBOutlet weak var requestLocationBtn: UIButton!
+    @IBOutlet weak var manualLocationBtn: UIButton!
+    @IBOutlet weak var termsLabel: UILabel!
+    @IBOutlet weak var indicator: UIActivityIndicatorView!
     
     static let storyboardID = "place-view"
     
@@ -27,58 +29,75 @@ class PlaceView: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Show the loading spinner
-        DispatchQueue.main.async { [unowned self] in
-            self.view.showBlurLoader()
-        }
         presenter.viewDidLoad()
     }
     
-    @IBAction func actionBtnDidTapped(_ sender: UIButton) {
-        if isValidateLocation() {
-            presenter.getMerchants()
-        } else {
-            utils.showAlert(
-                with: "Location error",
-                message: "Please fill the address before continue."
-            )
+    @IBAction func locationDidRequested(_ sender: UIButton) {
+        DispatchQueue.main.async {
+            self.indicator.isHidden = false
+            self.indicator.startAnimating()
+            self.requestLocationBtn.titleLabel?.isHidden = true
         }
+        presenter.requestLocation()
     }
-
-    @IBAction func placeTxtfieldDidTouched(_ sender: UITextField) {
-        sender.resignFirstResponder()
-        let navigation = UINavigationController(
-            rootViewController: AutoCompleteRouter.assembleModule())
-        present(navigation, animated: true, completion: nil)
+    
+    @IBAction func manuallyLocationDidRequested(_ sender: UIButton) {
+        presenter.launchLocationSettings()
     }
 }
 
 // MARK: - Methods
 extension PlaceView {
-    private func isValidateLocation() -> Bool {
-        return ((placeTxtField.text?.isEmpty) != nil)
+    /**
+     Simple Action Sheet
+     - Show action sheet with title and alert message and actions
+     */
+    func showConfirmationAddress(for addr: String) {
+        print("\(#function)")
+        let alert = UIAlertController(
+            title: "Confirm your location",
+            message: addr,
+            preferredStyle: .actionSheet
+        )
+        
+        alert.addAction(UIAlertAction(title: "Approve", style: .default, handler: {
+            [unowned self] (_) in
+            self.presenter.redirectToHome(with: addr)
+        }))
+
+        alert.addAction(UIAlertAction(title: "Edit", style: .default, handler: {
+            [unowned self] (_) in
+            self.presenter.launchLocationSettings()
+        }))
+
+        alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
+
+        present(alert, animated: true, completion: nil)
     }
 }
 
 extension PlaceView: PlaceViewInput {
     func addressIsYield(with text: String) {
-        DispatchQueue.main.async {
-            [unowned self] in
-            self.placeTxtField.text = text
-        }
+        self.dismiss(animated: true, completion: {
+            DispatchQueue.main.async {
+                self.showConfirmationAddress(for: text)
+            }
+        })
+        
     }
     
     func errorIsThrown(with error: String) {
+        DispatchQueue.main.async {
+            self.indicator.stopAnimating()
+            self.requestLocationBtn.titleLabel?.isHidden = false
+        }
+        
         utils.showAlert(message: error)
     }
     
     func placeIsSetup() {
         // Init the Utils data
         utils = Utils(self)
-        actionBtn.layer.cornerRadius = 24
-        // remove the loading spinner
-        DispatchQueue.main.async { [unowned self] in
-            self.view.removeBlurLoader()
-        }
+        indicator.hidesWhenStopped = true
     }
 }
