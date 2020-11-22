@@ -50,6 +50,8 @@
 		E85C7AC4256814770008BBCA /* AuthInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85C7AC3256814770008BBCA /* AuthInteractor.swift */; };
 		E85C7ACF25683A3A0008BBCA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E85C7ACE25683A3A0008BBCA /* GoogleService-Info.plist */; };
 		E85EC17E256708EB00B57732 /* UIImageview+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85EC17D256708EB00B57732 /* UIImageview+Extensions.swift */; };
+		E8BE56FF256AADEB00147EA5 /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BE56FD256AADEB00147EA5 /* HeaderCell.swift */; };
+		E8BE5700256AADEB00147EA5 /* HeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8BE56FE256AADEB00147EA5 /* HeaderCell.xib */; };
 		E8DFDADD255B49EE0000AAA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DFDADC255B49EE0000AAA9 /* AppDelegate.swift */; };
 		E8DFDADF255B49EE0000AAA9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DFDADE255B49EE0000AAA9 /* SceneDelegate.swift */; };
 		E8DFDAE1255B49EE0000AAA9 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DFDAE0255B49EE0000AAA9 /* AuthView.swift */; };
@@ -116,6 +118,8 @@
 		E85C7AC3256814770008BBCA /* AuthInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthInteractor.swift; sourceTree = "<group>"; };
 		E85C7ACE25683A3A0008BBCA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E85EC17D256708EB00B57732 /* UIImageview+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageview+Extensions.swift"; sourceTree = "<group>"; };
+		E8BE56FD256AADEB00147EA5 /* HeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
+		E8BE56FE256AADEB00147EA5 /* HeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderCell.xib; sourceTree = "<group>"; };
 		E8DFDAD9255B49EE0000AAA9 /* CovidMarketPlace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CovidMarketPlace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8DFDADC255B49EE0000AAA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8DFDADE255B49EE0000AAA9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -301,6 +305,8 @@
 				E85C7A9A2567F4150008BBCA /* GoodSuggestionCell.xib */,
 				E85C7A9E2567F9D00008BBCA /* ShopCell.swift */,
 				E85C7A9F2567F9D00008BBCA /* ShopCell.xib */,
+				E8BE56FD256AADEB00147EA5 /* HeaderCell.swift */,
+				E8BE56FE256AADEB00147EA5 /* HeaderCell.xib */,
 			);
 			path = cells;
 			sourceTree = "<group>";
@@ -685,6 +691,7 @@
 				E85C7ACF25683A3A0008BBCA /* GoogleService-Info.plist in Resources */,
 				E8DFDAE4255B49EE0000AAA9 /* Main.storyboard in Resources */,
 				E85C7A872567EBD80008BBCA /* CategoryCell.xib in Resources */,
+				E8BE5700256AADEB00147EA5 /* HeaderCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -741,6 +748,7 @@
 				E823AEE6255F0EAC00CEC763 /* FavoriteEmpty.swift in Sources */,
 				E8336DB6255DF260008A8800 /* String+Extensions.swift in Sources */,
 				E85EC17E256708EB00B57732 /* UIImageview+Extensions.swift in Sources */,
+				E8BE56FF256AADEB00147EA5 /* HeaderCell.swift in Sources */,
 				E823AEDD255F0E2E00CEC763 /* FavoritesInteractor.swift in Sources */,
 				E8336DC8255E895A008A8800 /* Notification+Name.swift in Sources */,
 				E8DFDB15255C0F150000AAA9 /* SMSPresenter.swift in Sources */,

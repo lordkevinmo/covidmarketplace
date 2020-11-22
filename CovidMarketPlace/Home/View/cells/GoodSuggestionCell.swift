@@ -11,6 +11,8 @@ class GoodSuggestionCell: UICollectionViewCell {
     @IBOutlet weak var goodImage: UIImageView!
     @IBOutlet weak var categoryName: UILabel!
     
+    static let reuseIdentifier = "suggestion-cell"
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
