@@ -17,5 +17,13 @@ class OffersCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
     }
+}
 
+extension OffersCell : HomePopulate {
+    func populateView(with offer: Home) {
+        let off = offer as! Offers
+        
+        containerView.backgroundColor = off.color
+        offerLabel.text = off.offer
+    }
 }

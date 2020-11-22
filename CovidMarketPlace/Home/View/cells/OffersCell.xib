@@ -22,8 +22,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="103" height="114"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All offers" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FRW-aU-6a2">
-                                <rect key="frame" x="16" y="32.5" width="71" height="49.5"/>
-                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="20"/>
+                                <rect key="frame" x="16" y="48" width="71" height="18.5"/>
+                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>

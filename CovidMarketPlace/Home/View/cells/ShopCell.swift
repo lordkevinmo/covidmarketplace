@@ -25,5 +25,13 @@ class ShopCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
     }
+}
 
+extension ShopCell: HomePopulate {
+    func populateView(with merch: Home) {
+        let shop = merch as! Shop
+        shopName.text = shop.companyName
+        categoriesLabel.text = shop.category
+        shopAddress.text = shop.address
+    }
 }

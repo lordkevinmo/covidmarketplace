@@ -16,5 +16,11 @@ class AdsCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
     }
+}
 
+extension AdsCell: HomePopulate {
+    func populateView(with ads: Home) {
+        let ad = ads as! Ads
+        adsImage.image = ad.advert
+    }
 }
