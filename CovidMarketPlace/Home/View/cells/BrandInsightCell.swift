@@ -18,3 +18,10 @@ class BrandInsightCell: UICollectionViewCell {
     }
 
 }
+
+extension BrandInsightCell: HomePopulate {
+    func populateView(with brand: Home) {
+        let brand = brand as! Brand
+        brandLogo.image = brand.brand
+    }
+}

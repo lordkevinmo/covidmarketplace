@@ -17,5 +17,12 @@ class CategoryCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
     }
+}
 
+extension CategoryCell: HomePopulate {
+    func populateView(with category: Home) {
+        let cat = category as! Category
+        categoryIllustration.image = cat.image
+        categoryName.text = cat.categoryName
+    }
 }

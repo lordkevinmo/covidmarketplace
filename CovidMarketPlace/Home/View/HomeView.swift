@@ -60,10 +60,145 @@ class HomeView: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         addressLabel.setTitle(address, for: .normal)
+        setupCollectionView()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        collectionView.reloadData()
     }
 
     @IBAction func addressIsRequested(_ sender: UIButton) {
         
+    }
+}
+
+// MARK: - collectionview datasource delegation
+extension HomeView : UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        let sectionType = Components.allCases[section]
+        
+        switch sectionType {
+        case .ads:
+            return adverts.count
+        case .category:
+            return categories.count
+        case .suggestion:
+            return suggestions.count
+        case .offers:
+            return offers.count
+        case .insight:
+            return brands.count
+        case .shop:
+            return shops.count
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let sectionType = Components.allCases[indexPath.section]
+        
+        switch sectionType {
+        case .ads:
+            return getAdsCell(collectionView: collectionView, indexPath: indexPath)
+        case .category:
+            return getCategoryCell(collectionView: collectionView, indexPath: indexPath)
+        case .suggestion:
+            return getSuggestionCell(collectionView: collectionView, indexPath: indexPath)
+        case .offers:
+            return getOffersCell(collectionView: collectionView, indexPath: indexPath)
+        case .insight:
+            return getBrandsCell(collectionView: collectionView, indexPath: indexPath)
+        case .shop:
+            return getMerchantsCell(collectionView: collectionView, indexPath: indexPath)
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let sectionType = Components.allCases[indexPath.section]
+        let cell = collectionView.dequeueReusableSupplementaryView(
+            ofKind: kind, withReuseIdentifier: HeaderCell.reuseIdentifier, for: indexPath) as! HeaderCell
+        cell.headerTitle.text = sectionType.sectionName
+        
+        return cell
+    }
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 6
+    }
+}
+
+// MARK: - Methods for datasource
+extension HomeView {
+    private func getAdsCell(collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(
+            withReuseIdentifier: AdsCell.reuseIdentifier, for: indexPath)
+            as? AdsCell else {
+                return UICollectionViewCell()
+        }
+        
+        cell.populateView(with: adverts[indexPath.row])
+        
+        return cell
+    }
+    
+    private func getCategoryCell(collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(
+            withReuseIdentifier: CategoryCell.reuseIdentifier, for: indexPath)
+            as? CategoryCell else {
+                return UICollectionViewCell()
+        }
+        
+        cell.populateView(with: categories[indexPath.row])
+        
+        return cell
+    }
+    
+    private func getSuggestionCell(collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(
+            withReuseIdentifier: GoodSuggestionCell.reuseIdentifier, for: indexPath)
+            as? GoodSuggestionCell else {
+                return UICollectionViewCell()
+        }
+        
+        cell.populateView(with: suggestions[indexPath.row])
+        
+        return cell
+    }
+    
+    private func getOffersCell(collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(
+            withReuseIdentifier: OffersCell.reuseIdentifier, for: indexPath)
+            as? OffersCell else {
+                return UICollectionViewCell()
+        }
+        
+        cell.populateView(with: offers[indexPath.row])
+        
+        return cell
+    }
+    
+    private func getBrandsCell(collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(
+            withReuseIdentifier: BrandInsightCell.reuseIdentifier, for: indexPath)
+            as? BrandInsightCell else {
+                return UICollectionViewCell()
+        }
+        
+        cell.populateView(with: brands[indexPath.row])
+        
+        return cell
+    }
+    
+    private func getMerchantsCell(collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(
+            withReuseIdentifier: ShopCell.reuseIdentifier, for: indexPath)
+            as? ShopCell else {
+                return UICollectionViewCell()
+        }
+        
+        cell.populateView(with: shops[indexPath.row])
+        
+        return cell
     }
 }
 
@@ -102,6 +237,7 @@ extension HomeView {
             UINib(nibName: "HeaderCell", bundle: nil),
             forSupplementaryViewOfKind: HomeView.sectionHeaderElementKind,
             withReuseIdentifier: HeaderCell.reuseIdentifier)
+        collectionView.dataSource = self
     }
     
     private func createLayout() -> UICollectionViewLayout {
@@ -118,8 +254,10 @@ extension HomeView {
             switch sectionLayoutKind {
             case .ads, .category, .suggestion:
                 return buildColumnsCell(sectionIndex: section, width: width)
-            case .offers, .insight:
-                return buildOptionsCell()
+            case .offers:
+                return buildOptionsCell(width: 0.25, height: 0.25)
+            case .insight:
+                return buildOptionsCell(width: 0.2, height: 0.2)
             case .shop:
                 return buildShopTypeCell()
             }
@@ -162,14 +300,14 @@ extension HomeView {
     
     /// build horizontal scrolling collectionview cell type behaviour and setup the cell size
     /// - Returns: the built NSCollectionSection instance
-    private func buildOptionsCell() -> NSCollectionLayoutSection {
+    private func buildOptionsCell(width: CGFloat, height: CGFloat) -> NSCollectionLayoutSection {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
                                              heightDimension: .fractionalHeight(1.0))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         
         let groupSize = NSCollectionLayoutSize(
-            widthDimension: .fractionalWidth(0.4),
-            heightDimension: .fractionalWidth(0.3))
+            widthDimension: .fractionalWidth(width),
+            heightDimension: .fractionalWidth(height))
         
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
         
@@ -184,7 +322,7 @@ extension HomeView {
     }
     
     private func buildShopTypeCell() -> NSCollectionLayoutSection {
-        let estimatedHeight = CGFloat(250)
+        let estimatedHeight = CGFloat(170)
         let layoutSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
                                                heightDimension: .estimated(estimatedHeight))
         let item = NSCollectionLayoutItem(layoutSize: layoutSize)

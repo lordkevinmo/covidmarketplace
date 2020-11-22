@@ -19,3 +19,13 @@ class GoodSuggestionCell: UICollectionViewCell {
     }
 
 }
+
+extension GoodSuggestionCell: HomePopulate {
+    func populateView(with good: Home) {
+        let sugg = good as! Suggestion
+        goodImage.image = sugg.image
+        categoryName.text = sugg.suggestion
+    }
+    
+    
+}
