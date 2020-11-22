@@ -19,6 +19,8 @@ class ShopCell: UICollectionViewCell {
     @IBOutlet weak var distanceView: UIView!
     @IBOutlet weak var distanceLabel: UILabel!
     
+    static let reuseIdentifier = "shop-cell"
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

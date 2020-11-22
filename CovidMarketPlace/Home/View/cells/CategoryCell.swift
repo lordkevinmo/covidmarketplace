@@ -11,6 +11,8 @@ class CategoryCell: UICollectionViewCell {
     @IBOutlet weak var categoryIllustration: UIImageView!
     @IBOutlet weak var categoryName: UILabel!
     
+    static let reuseIdentifier = "category-cell"
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -5,7 +5,99 @@
 //  Created by Moïse AGBENYA on 12/11/2020.
 //
 
-import Foundation
+import UIKit
+
+protocol Home {
+    var id: UUID { get set }
+    var type: UInt8 { get set }
+}
+
+struct Ads: Home {
+    var id: UUID = UUID()
+    var type: UInt8 = 1
+    let advert: UIImage!
+}
+
+extension Ads: Equatable {
+    static func ==(lhs: Ads, rhs: Ads) -> Bool {
+        return lhs.id == rhs.id
+    }
+}
+
+extension Ads: Hashable {
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+}
+
+let adverts : [Ads] = [
+    Ads(advert: UIImage(named: "black"))
+]
+
+/* -----------------------------------------------------*/
+
+struct Category: Home {
+    var id: UUID = UUID()
+    
+    var type: UInt8 = 2
+    
+    let categoryName: String?
+    let image: UIImage!
+}
+
+extension Category: Equatable {
+    static func ==(lhs: Category, rhs: Category) -> Bool {
+        return lhs.id == rhs.id
+    }
+}
+
+extension Category: Hashable {
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+}
+
+struct Suggestion: Home {
+    var id: UUID = UUID()
+    
+    var type: UInt8 = 3
+    
+    let suggestion: String?
+    let image: UIImage!
+}
+
+extension Suggestion: Equatable {
+    static func ==(lhs: Suggestion, rhs: Suggestion) -> Bool {
+        return lhs.id == rhs.id
+    }
+}
+
+extension Suggestion: Hashable {
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+}
+
+struct Offers: Home {
+    var id: UUID = UUID()
+    
+    var type: UInt8 = 4
+    
+    let color: UIColor!
+    let offer: String!
+}
+
+extension Offers: Equatable {
+    static func ==(lhs: Offers, rhs: Offers) -> Bool {
+        return lhs.id == rhs.id
+    }
+}
+
+extension Offers: Hashable {
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+}
 
 struct Merchant: Codable {
     let companyName: String?
@@ -17,10 +109,6 @@ struct Merchant: Codable {
     let open: Bool?
 }
 
-
-struct Category: Codable {
-    let categoryName: String?
-}
 
 let merchants: [Merchant] = [
     Merchant(
@@ -54,9 +142,9 @@ let merchants: [Merchant] = [
 ]
 
 let categories: [Category] = [
-    Category(categoryName: "Épicerie"),
-    Category(categoryName: "Jouets"),
-    Category(categoryName: "Restaurant"),
-    Category(categoryName: "Sport"),
-    Category(categoryName: "Textile")
+    Category(categoryName: "Florist", image: UIImage(named: "flower")),
+    Category(categoryName: "Toys", image: UIImage(named: "clip-travel")),
+    Category(categoryName: "Restaurant", image: UIImage(named: "flower")),
+    Category(categoryName: "Sport", image: UIImage(named: "flower")),
+    Category(categoryName: "Textile", image: UIImage(named: "flower"))
 ]
