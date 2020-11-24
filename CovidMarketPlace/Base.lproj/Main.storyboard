@@ -458,6 +458,59 @@
             </objects>
             <point key="canvasLocation" x="4286.9565217391309" y="-607.36607142857144"/>
         </scene>
+        <!--Search View-->
+        <scene sceneID="NHV-ag-zRm">
+            <objects>
+                <viewController storyboardIdentifier="search-view" id="yDY-sS-QcD" customClass="SearchView" customModule="CovidMarketPlace" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3eE-ge-5tZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="T03-Lb-wEh">
+                                <rect key="frame" x="0.0" y="44" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dwI-cc-uuJ">
+                                <rect key="frame" x="0.0" y="100" width="414" height="762"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="f2r-0v-d5m"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="T03-Lb-wEh" firstAttribute="trailing" secondItem="f2r-0v-d5m" secondAttribute="trailing" id="8gY-Zh-hAx"/>
+                            <constraint firstItem="dwI-cc-uuJ" firstAttribute="top" secondItem="T03-Lb-wEh" secondAttribute="bottom" id="H8X-l8-yuY"/>
+                            <constraint firstItem="dwI-cc-uuJ" firstAttribute="bottom" secondItem="f2r-0v-d5m" secondAttribute="bottom" id="ZL1-qE-Tif"/>
+                            <constraint firstItem="dwI-cc-uuJ" firstAttribute="leading" secondItem="f2r-0v-d5m" secondAttribute="leading" id="dVE-Tj-4Tv"/>
+                            <constraint firstItem="T03-Lb-wEh" firstAttribute="top" secondItem="f2r-0v-d5m" secondAttribute="top" id="hbU-IR-MD9"/>
+                            <constraint firstItem="T03-Lb-wEh" firstAttribute="leading" secondItem="f2r-0v-d5m" secondAttribute="leading" id="kSa-rS-rPH"/>
+                            <constraint firstItem="dwI-cc-uuJ" firstAttribute="trailing" secondItem="f2r-0v-d5m" secondAttribute="trailing" id="pow-BM-9HY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="container" destination="dwI-cc-uuJ" id="f1f-3S-ICi"/>
+                        <outlet property="searchbar" destination="T03-Lb-wEh" id="IxN-gW-2OH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6yZ-im-jlN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4287" y="-1357"/>
+        </scene>
+        <!--Shop Home View-->
+        <scene sceneID="S0V-tT-LyG">
+            <objects>
+                <viewController storyboardIdentifier="shop-home" id="bnr-0M-oe9" customClass="ShopHomeView" customModule="CovidMarketPlace" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="amz-b3-spi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="yXv-Qx-V6z"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ceb-5c-oKo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5086" y="-607"/>
+        </scene>
         <!--Orders-->
         <scene sceneID="Wr1-uu-pHv">
             <objects>
@@ -537,7 +590,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z0C-Zz-bds" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6121.739130434783" y="95.758928571428569"/>
+            <point key="canvasLocation" x="5086" y="96"/>
         </scene>
         <!--Account-->
         <scene sceneID="xTp-vO-fs7">
