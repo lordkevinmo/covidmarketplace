@@ -238,6 +238,7 @@ extension HomeView {
             forSupplementaryViewOfKind: HomeView.sectionHeaderElementKind,
             withReuseIdentifier: HeaderCell.reuseIdentifier)
         collectionView.dataSource = self
+        collectionView.delegate = self
     }
     
     private func createLayout() -> UICollectionViewLayout {
@@ -348,5 +349,22 @@ extension HomeView {
             alignment: .top)
         
         return titleSupplementary
+    }
+}
+
+// MARK: UICollectionViewDelegate
+extension HomeView: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let layoutKind = Components.allCases[indexPath.section]
+        
+        switch layoutKind {
+        case .ads, .category, .suggestion, .offers, .insight:
+            break
+        case .shop:
+            navigationController?.pushViewController(
+                ShopHome(collectionViewLayout: HeaderLayout()),
+                animated: true
+            )
+        }
     }
 }
