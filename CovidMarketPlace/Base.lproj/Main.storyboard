@@ -254,8 +254,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="common_location" translatesAutoresizingMaskIntoConstraints="NO" id="mNp-PK-dMh">
-                                <rect key="frame" x="16" y="113.5" width="382" height="304"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="common_location" translatesAutoresizingMaskIntoConstraints="NO" id="mNp-PK-dMh">
+                                <rect key="frame" x="16" y="60" width="382" height="357.5"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi, pleased to meet you!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hAm-PT-5ny">
                                 <rect key="frame" x="16" y="433.5" width="382" height="29.5"/>
@@ -327,6 +327,7 @@
                             <constraint firstItem="ADB-UJ-4k4" firstAttribute="bottom" secondItem="AqO-2l-jQR" secondAttribute="bottom" constant="16" id="XrH-If-bng"/>
                             <constraint firstItem="AqO-2l-jQR" firstAttribute="leading" secondItem="ADB-UJ-4k4" secondAttribute="leading" constant="16" id="dUY-T7-Mlw"/>
                             <constraint firstItem="f2S-mI-Lom" firstAttribute="centerX" secondItem="LmM-FD-uD2" secondAttribute="centerX" id="hFl-xK-v22"/>
+                            <constraint firstItem="mNp-PK-dMh" firstAttribute="top" secondItem="ADB-UJ-4k4" secondAttribute="top" constant="16" id="iEG-Qp-DiK"/>
                             <constraint firstItem="LmM-FD-uD2" firstAttribute="leading" secondItem="ADB-UJ-4k4" secondAttribute="leading" constant="16" id="rJh-2a-Kzq"/>
                             <constraint firstItem="ADB-UJ-4k4" firstAttribute="trailing" secondItem="LmM-FD-uD2" secondAttribute="trailing" constant="16" id="rVf-HW-Wrj"/>
                             <constraint firstItem="ADB-UJ-4k4" firstAttribute="trailing" secondItem="AqO-2l-jQR" secondAttribute="trailing" constant="16" id="xXp-fy-Mbu"/>
@@ -495,21 +496,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6yZ-im-jlN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4287" y="-1357"/>
-        </scene>
-        <!--Shop Home View-->
-        <scene sceneID="S0V-tT-LyG">
-            <objects>
-                <viewController storyboardIdentifier="shop-home" id="bnr-0M-oe9" customClass="ShopHomeView" customModule="CovidMarketPlace" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="amz-b3-spi">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="yXv-Qx-V6z"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ceb-5c-oKo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5086" y="-607"/>
         </scene>
         <!--Orders-->
         <scene sceneID="Wr1-uu-pHv">
