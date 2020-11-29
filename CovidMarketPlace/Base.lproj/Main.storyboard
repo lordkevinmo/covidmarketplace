@@ -459,6 +459,24 @@
             </objects>
             <point key="canvasLocation" x="4286.9565217391309" y="-607.36607142857144"/>
         </scene>
+        <!--Shop Home-->
+        <scene sceneID="HN8-RS-8hf">
+            <objects>
+                <tableViewController storyboardIdentifier="shop-home-view" hidesBottomBarWhenPushed="YES" id="FNV-8D-LkL" customClass="ShopHome" customModule="CovidMarketPlace" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="300" sectionFooterHeight="28" id="vWr-Uf-xn3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <connections>
+                            <outlet property="dataSource" destination="FNV-8D-LkL" id="Fon-oj-Emv"/>
+                            <outlet property="delegate" destination="FNV-8D-LkL" id="M28-zY-crh"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KeB-nx-TkC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5086" y="-607"/>
+        </scene>
         <!--Search View-->
         <scene sceneID="NHV-ag-zRm">
             <objects>

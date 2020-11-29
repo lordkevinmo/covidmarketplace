@@ -63,6 +63,11 @@ class HomeView: UIViewController {
         setupCollectionView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         collectionView.reloadData()
@@ -362,7 +367,7 @@ extension HomeView: UICollectionViewDelegate {
             break
         case .shop:
             navigationController?.pushViewController(
-                ShopHome(collectionViewLayout: HeaderLayout()),
+                ShopHomeRouter.assembleModule(),
                 animated: true
             )
         }
