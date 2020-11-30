@@ -50,7 +50,6 @@ class ShopHome: UITableViewController {
         if !contents[section].isExpanded {
             return 0
         }
-        
         return contents[section].subCategories.count
     }
 
@@ -86,6 +85,9 @@ class ShopHome: UITableViewController {
                 } else {
                     tableView.insertRows(at: indexPaths, with: .fade)
                 }
+            } else {
+                navigationController?.pushViewController(
+                    ShopHomeDescription(), animated: true)
             }
         }
         
@@ -107,6 +109,10 @@ class ShopHome: UITableViewController {
     override func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let header = tableView.tableHeaderView as! HeaderView
         header.scrollViewDidScroll(scrollView: scrollView)
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
     }
 
 }
