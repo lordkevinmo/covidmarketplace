@@ -21,7 +21,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ITJ-Om-HYd">
                         <rect key="frame" x="0.0" y="0.0" width="173" height="268"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jJ9-bP-LgT">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flower" translatesAutoresizingMaskIntoConstraints="NO" id="jJ9-bP-LgT">
                                 <rect key="frame" x="0.0" y="0.0" width="173" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="LN3-jO-tHb"/>
@@ -100,6 +100,7 @@
         </collectionViewCell>
     </objects>
     <resources>
+        <image name="flower" width="426.5" height="387"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -20,5 +20,14 @@ class ProductsCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
     }
+}
 
+// MARK: - Methods
+extension ProductsCell {
+    func populateProduct(product: Product) {
+        productName.text = product.productName
+        categoryDetails.text = product.productDetails
+        price.text = "\(product.price!) €"
+        attribute.text = "\(product.attribut!)"
+    }
 }
