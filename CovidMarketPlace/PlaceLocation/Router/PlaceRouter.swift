@@ -6,32 +6,36 @@
 //
 
 import UIKit
-import CoreLocation
 
 protocol PlaceRouterInput: class {
     var viewController: UIViewController? { get set }
-    func redirectToHome(with: [Merchant])
-    static func assembleModule(by: CLLocation?) -> UIViewController
+    func redirectToHome(with: String)
+    func requestLocation()
+    static func assembleModule() -> UIViewController
 }
 
 class PlaceRouter: NSObject, PlaceRouterInput {
     var viewController: UIViewController?
     
-    func redirectToHome(with merchants: [Merchant]) {
-        // Implement redirection to home screen
-        print("\(#function)")
-        let controller = storyBoard.instantiateViewController(
-            withIdentifier: MainViewController.storyboardID) as! MainViewController
-        controller.merchants = merchants
-        controller.selectedIndex = .HOMEBAR
-        viewController?.show(controller, sender: viewController.self)
+    func requestLocation() {
+        let nav = UINavigationController(rootViewController: AutoCompleteRouter.assembleModule())
+        viewController?.navigationController?.present(nav, animated: true, completion: nil)
     }
     
-    static func assembleModule(by location: CLLocation?) -> UIViewController {
+    func redirectToHome(with addr: String) {
+        // Implement redirection to home screen
+        let controller = storyBoard.instantiateViewController(
+            withIdentifier: MainViewController.storyboardID) as! MainViewController
+        controller.address = addr
+        controller.selectedIndex = .HOMEBAR
+        viewController?.show(controller, sender: self)
+    }
+    
+    static func assembleModule() -> UIViewController {
         let view = storyBoard.instantiateViewController(
             withIdentifier: PlaceView.storyboardID) as! PlaceView
         let presenter = PlacePresenter()
-        let interactor = PlaceInteractor(location: location)
+        let interactor = PlaceInteractor()
         let router = PlaceRouter()
         view.presenter = presenter
         presenter.view = view

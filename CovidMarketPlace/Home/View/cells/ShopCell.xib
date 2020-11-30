@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="shop-cell" id="gTV-IL-0wX" customClass="ShopCell" customModule="CovidMarketPlace" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="497" height="489"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="497" height="489"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w7j-4o-kW5">
+                        <rect key="frame" x="0.0" y="44" width="497" height="411"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="carrefour" translatesAutoresizingMaskIntoConstraints="NO" id="11z-q3-nIT">
+                                <rect key="frame" x="0.0" y="0.0" width="497" height="311"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Gme-pW-Mrd">
+                                <rect key="frame" x="8" y="319" width="481" height="21"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carrefour Market" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q5Y-sT-MbF">
+                                        <rect key="frame" x="0.0" y="0.0" width="404.5" height="21"/>
+                                        <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="252" horizontalCompressionResistancePriority="752" image="star.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="xO9-sz-HWu">
+                                        <rect key="frame" x="412.5" y="-0.5" width="22" height="21"/>
+                                        <color key="tintColor" name="AccentColor"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="3.8/5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cyC-cS-QEU">
+                                        <rect key="frame" x="442.5" y="0.0" width="38.5" height="21"/>
+                                        <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cMq-ZG-5wV">
+                                <rect key="frame" x="8" y="356" width="481" height="15.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alimentation générale, Textile, fruits et légumes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9DD-be-rcX">
+                                        <rect key="frame" x="0.0" y="0.0" width="458.5" height="15.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="13"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="255" verticalHuggingPriority="251" text="€€" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fcD-Dv-v8V">
+                                        <rect key="frame" x="466.5" y="0.0" width="14.5" height="15.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="13"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9 Avenue Charles Bohn, Belfort" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P7J-Fe-YTh">
+                                <rect key="frame" x="8" y="379.5" width="481" height="15.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BuW-YB-OEO">
+                                <rect key="frame" x="421" y="273" width="68" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="900 m" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AYm-H0-nwN">
+                                        <rect key="frame" x="20" y="9" width="28" height="12"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="10"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="AYm-H0-nwN" firstAttribute="centerY" secondItem="BuW-YB-OEO" secondAttribute="centerY" id="Bvm-TT-MXy"/>
+                                    <constraint firstAttribute="width" constant="68" id="Jc0-wJ-iSX"/>
+                                    <constraint firstItem="AYm-H0-nwN" firstAttribute="centerX" secondItem="BuW-YB-OEO" secondAttribute="centerX" id="Qbm-v8-1c6"/>
+                                    <constraint firstAttribute="height" constant="30" id="ixG-Nh-Glv"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Gme-pW-Mrd" firstAttribute="leading" secondItem="w7j-4o-kW5" secondAttribute="leading" constant="8" id="2Q9-ZS-7rI"/>
+                            <constraint firstItem="11z-q3-nIT" firstAttribute="leading" secondItem="w7j-4o-kW5" secondAttribute="leading" id="E8J-qj-fVZ"/>
+                            <constraint firstItem="11z-q3-nIT" firstAttribute="top" secondItem="w7j-4o-kW5" secondAttribute="top" id="GUY-a6-Smx"/>
+                            <constraint firstAttribute="trailing" secondItem="11z-q3-nIT" secondAttribute="trailing" id="GUd-gu-3mS"/>
+                            <constraint firstItem="cMq-ZG-5wV" firstAttribute="leading" secondItem="w7j-4o-kW5" secondAttribute="leading" constant="8" id="JDI-xW-wy3"/>
+                            <constraint firstItem="Gme-pW-Mrd" firstAttribute="top" secondItem="BuW-YB-OEO" secondAttribute="bottom" constant="16" id="M9X-Bo-Q7o"/>
+                            <constraint firstItem="P7J-Fe-YTh" firstAttribute="leading" secondItem="w7j-4o-kW5" secondAttribute="leading" constant="8" id="Q2U-s4-xim"/>
+                            <constraint firstAttribute="trailing" secondItem="P7J-Fe-YTh" secondAttribute="trailing" constant="8" id="U2X-hg-jMm"/>
+                            <constraint firstAttribute="bottom" secondItem="P7J-Fe-YTh" secondAttribute="bottom" constant="16" id="Zsa-DJ-sT6"/>
+                            <constraint firstAttribute="trailing" secondItem="Gme-pW-Mrd" secondAttribute="trailing" constant="8" id="cWG-Jc-T2s"/>
+                            <constraint firstItem="Gme-pW-Mrd" firstAttribute="top" secondItem="11z-q3-nIT" secondAttribute="bottom" constant="8" symbolic="YES" id="ecJ-7i-LAl"/>
+                            <constraint firstAttribute="trailing" secondItem="BuW-YB-OEO" secondAttribute="trailing" constant="8" id="h5f-Zd-vQ5"/>
+                            <constraint firstItem="cMq-ZG-5wV" firstAttribute="top" secondItem="Gme-pW-Mrd" secondAttribute="bottom" constant="16" id="hIQ-Xb-kIN"/>
+                            <constraint firstItem="P7J-Fe-YTh" firstAttribute="top" secondItem="cMq-ZG-5wV" secondAttribute="bottom" constant="8" symbolic="YES" id="pqW-KU-Rdb"/>
+                            <constraint firstAttribute="trailing" secondItem="cMq-ZG-5wV" secondAttribute="trailing" constant="8" id="rqU-8B-pSo"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="w7j-4o-kW5" secondAttribute="trailing" id="7mD-lh-L3Z"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="bottom" secondItem="w7j-4o-kW5" secondAttribute="bottom" id="C15-7N-m5l"/>
+                <constraint firstItem="w7j-4o-kW5" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" id="mqQ-5T-8rI"/>
+                <constraint firstItem="w7j-4o-kW5" firstAttribute="top" secondItem="ZTg-uK-7eu" secondAttribute="top" id="qN9-dl-7LR"/>
+            </constraints>
+            <size key="customSize" width="497" height="489"/>
+            <connections>
+                <outlet property="categoriesLabel" destination="9DD-be-rcX" id="Vu1-cy-hoe"/>
+                <outlet property="container" destination="w7j-4o-kW5" id="16n-lA-OgK"/>
+                <outlet property="distanceLabel" destination="AYm-H0-nwN" id="KV3-MG-i5J"/>
+                <outlet property="distanceView" destination="BuW-YB-OEO" id="Y34-Ut-TgR"/>
+                <outlet property="priceTypeLabel" destination="fcD-Dv-v8V" id="ceq-6f-SLh"/>
+                <outlet property="reviewMark" destination="cyC-cS-QEU" id="gea-N8-gCg"/>
+                <outlet property="shopAddress" destination="P7J-Fe-YTh" id="MQ3-Z1-yex"/>
+                <outlet property="shopImg" destination="11z-q3-nIT" id="ix0-Ci-iuJ"/>
+                <outlet property="shopName" destination="Q5Y-sT-MbF" id="Tga-qi-UbB"/>
+                <outlet property="star" destination="xO9-sz-HWu" id="r1S-15-b7p"/>
+            </connections>
+            <point key="canvasLocation" x="182" y="84"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="carrefour" width="400" height="266.5"/>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
+        <namedColor name="AccentColor">
+            <color red="0.25098039215686274" green="0.4392156862745098" blue="0.46666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -17,3 +17,7 @@ extension Int {
     static let FAVBAR = 1
     static let ACCOUNTBAR = 2
 }
+
+extension UInt8 {
+    static let MAX_TIME: UInt8 = 59
+}

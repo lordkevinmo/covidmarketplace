@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="header-cell" id="U6b-Vx-4bR" customClass="HeaderCell" customModule="CovidMarketPlace" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="408" height="154"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W2I-kn-BJj">
+                    <rect key="frame" x="0.0" y="44" width="408" height="110"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qdE-F0-qVA">
+                            <rect key="frame" x="8" y="45" width="349" height="20"/>
+                            <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="16"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="255" horizontalCompressionResistancePriority="755" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rNa-Qx-UnC">
+                            <rect key="frame" x="365" y="42" width="35" height="26"/>
+                            <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="11"/>
+                            <state key="normal" title="See all"/>
+                            <connections>
+                                <action selector="expandBtnDidTapped:" destination="U6b-Vx-4bR" eventType="touchUpInside" id="LA7-rH-W9M"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="rNa-Qx-UnC" firstAttribute="centerY" secondItem="qdE-F0-qVA" secondAttribute="centerY" id="Dyp-1M-Ci5"/>
+                        <constraint firstItem="qdE-F0-qVA" firstAttribute="leading" secondItem="W2I-kn-BJj" secondAttribute="leading" constant="8" id="I1W-Mi-AQF"/>
+                        <constraint firstAttribute="trailing" secondItem="rNa-Qx-UnC" secondAttribute="trailing" constant="8" id="NGN-Xv-WIA"/>
+                        <constraint firstItem="qdE-F0-qVA" firstAttribute="centerY" secondItem="W2I-kn-BJj" secondAttribute="centerY" id="ndS-dU-i4z"/>
+                        <constraint firstItem="rNa-Qx-UnC" firstAttribute="leading" secondItem="qdE-F0-qVA" secondAttribute="trailing" constant="8" symbolic="YES" id="rNA-ae-tA7"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
+            <constraints>
+                <constraint firstItem="W2I-kn-BJj" firstAttribute="top" secondItem="VXr-Tz-HHm" secondAttribute="top" id="WS2-1r-oqZ"/>
+                <constraint firstItem="VXr-Tz-HHm" firstAttribute="bottom" secondItem="W2I-kn-BJj" secondAttribute="bottom" id="hUC-UE-uHu"/>
+                <constraint firstItem="W2I-kn-BJj" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" id="r2j-Us-rJ7"/>
+                <constraint firstItem="W2I-kn-BJj" firstAttribute="trailing" secondItem="VXr-Tz-HHm" secondAttribute="trailing" id="tPZ-4v-far"/>
+            </constraints>
+            <connections>
+                <outlet property="expandBtn" destination="rNa-Qx-UnC" id="AYn-cS-egK"/>
+                <outlet property="headerTitle" destination="qdE-F0-qVA" id="r5V-qI-GHI"/>
+            </connections>
+            <point key="canvasLocation" x="175.36231884057972" y="183.48214285714286"/>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

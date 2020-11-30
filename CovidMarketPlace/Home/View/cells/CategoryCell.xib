@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="category-cell" id="gTV-IL-0wX" customClass="CategoryCell" customModule="CovidMarketPlace" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="125" height="109"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="125" height="109"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vFl-fJ-Za4">
+                        <rect key="frame" x="0.0" y="0.0" width="125" height="109"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="flower" translatesAutoresizingMaskIntoConstraints="NO" id="Kvo-YN-xYy">
+                                <rect key="frame" x="37.5" y="8" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="rhA-Xl-vWX"/>
+                                    <constraint firstAttribute="height" constant="50" id="sP6-x3-x1X"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Florist" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="URT-Ys-0N0">
+                                <rect key="frame" x="49" y="82" width="27.5" height="12.5"/>
+                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="10"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Kvo-YN-xYy" firstAttribute="top" secondItem="vFl-fJ-Za4" secondAttribute="top" constant="8" id="4zW-e7-k0y"/>
+                            <constraint firstItem="Kvo-YN-xYy" firstAttribute="centerX" secondItem="vFl-fJ-Za4" secondAttribute="centerX" id="8aL-mi-dBS"/>
+                            <constraint firstItem="URT-Ys-0N0" firstAttribute="centerX" secondItem="vFl-fJ-Za4" secondAttribute="centerX" id="KzR-qE-tYA"/>
+                            <constraint firstItem="URT-Ys-0N0" firstAttribute="top" secondItem="Kvo-YN-xYy" secondAttribute="bottom" constant="24" id="kKH-4Z-56n"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="vFl-fJ-Za4" secondAttribute="bottom" id="1nr-pC-G12"/>
+                <constraint firstItem="vFl-fJ-Za4" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Srr-5V-5W8"/>
+                <constraint firstAttribute="trailing" secondItem="vFl-fJ-Za4" secondAttribute="trailing" id="WmF-YH-wqQ"/>
+                <constraint firstItem="vFl-fJ-Za4" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="cRv-6l-EPZ"/>
+            </constraints>
+            <size key="customSize" width="125" height="109"/>
+            <connections>
+                <outlet property="categoryIllustration" destination="Kvo-YN-xYy" id="wqA-gv-gki"/>
+                <outlet property="categoryName" destination="URT-Ys-0N0" id="Tl9-AC-zGz"/>
+            </connections>
+            <point key="canvasLocation" x="26.811594202898554" y="64.620535714285708"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="flower" width="426.5" height="387"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

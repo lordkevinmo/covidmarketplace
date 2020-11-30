@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="offers-cell" id="gTV-IL-0wX" customClass="OffersCell" customModule="CovidMarketPlace" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="103" height="114"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="103" height="114"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IPF-0H-AtC">
+                        <rect key="frame" x="0.0" y="0.0" width="103" height="114"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All offers" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FRW-aU-6a2">
+                                <rect key="frame" x="16" y="48" width="71" height="18.5"/>
+                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="FRW-aU-6a2" firstAttribute="leading" secondItem="IPF-0H-AtC" secondAttribute="leading" constant="16" id="5rF-Ku-wKf"/>
+                            <constraint firstItem="FRW-aU-6a2" firstAttribute="centerY" secondItem="IPF-0H-AtC" secondAttribute="centerY" id="c5l-YW-LZb"/>
+                            <constraint firstAttribute="trailing" secondItem="FRW-aU-6a2" secondAttribute="trailing" constant="16" id="wyi-fp-Fke"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="IPF-0H-AtC" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Ct4-AA-P1C"/>
+                <constraint firstItem="IPF-0H-AtC" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="EOz-wL-ygh"/>
+                <constraint firstAttribute="bottom" secondItem="IPF-0H-AtC" secondAttribute="bottom" id="bmW-uu-Gh5"/>
+                <constraint firstAttribute="trailing" secondItem="IPF-0H-AtC" secondAttribute="trailing" id="enY-RO-qUX"/>
+            </constraints>
+            <size key="customSize" width="103" height="114"/>
+            <connections>
+                <outlet property="containerView" destination="IPF-0H-AtC" id="KP1-yg-g1J"/>
+                <outlet property="offerLabel" destination="FRW-aU-6a2" id="mcI-xG-7nE"/>
+            </connections>
+            <point key="canvasLocation" x="86.231884057971016" y="125.89285714285714"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
