@@ -8,6 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		8F3C2A6A5D648EE2DC6F7F44 /* Pods_CovidMarketPlace.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59FA914DAD1F08DFD2665691 /* Pods_CovidMarketPlace.framework */; };
+		E81E0BD92576CB3D000F3F63 /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81E0BD82576CB3D000F3F63 /* ProductView.swift */; };
+		E81E0BDD2576CDE4000F3F63 /* productImgCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81E0BDB2576CDE4000F3F63 /* productImgCell.swift */; };
+		E81E0BDE2576CDE4000F3F63 /* productImgCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E81E0BDC2576CDE4000F3F63 /* productImgCell.xib */; };
+		E81E0BE22576CEC5000F3F63 /* ProductTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81E0BE02576CEC5000F3F63 /* ProductTitle.swift */; };
+		E81E0BE32576CEC5000F3F63 /* ProductTitle.xib in Resources */ = {isa = PBXBuildFile; fileRef = E81E0BE12576CEC5000F3F63 /* ProductTitle.xib */; };
+		E81E0BE72576D517000F3F63 /* ProductPriceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81E0BE52576D517000F3F63 /* ProductPriceCell.swift */; };
+		E81E0BE82576D517000F3F63 /* ProductPriceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E81E0BE62576D517000F3F63 /* ProductPriceCell.xib */; };
+		E81E0BEC2576D7A0000F3F63 /* ProductDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81E0BEA2576D7A0000F3F63 /* ProductDescription.swift */; };
+		E81E0BED2576D7A0000F3F63 /* ProductDescription.xib in Resources */ = {isa = PBXBuildFile; fileRef = E81E0BEB2576D7A0000F3F63 /* ProductDescription.xib */; };
+		E81E0BF12576E6FE000F3F63 /* ProductSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81E0BEF2576E6FE000F3F63 /* ProductSelection.swift */; };
+		E81E0BF22576E6FE000F3F63 /* ProductSelection.xib in Resources */ = {isa = PBXBuildFile; fileRef = E81E0BF02576E6FE000F3F63 /* ProductSelection.xib */; };
 		E823AEC8255EE96A00CEC763 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E823AEC7255EE96A00CEC763 /* MainViewController.swift */; };
 		E823AECC255EF27700CEC763 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E823AECB255EF27700CEC763 /* HomeView.swift */; };
 		E823AED6255F0DE200CEC763 /* FavoritesLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = E823AED5255F0DE200CEC763 /* FavoritesLauncher.swift */; };
@@ -93,6 +104,17 @@
 /* Begin PBXFileReference section */
 		59FA914DAD1F08DFD2665691 /* Pods_CovidMarketPlace.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CovidMarketPlace.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEE6626206CA5C4C21BAAEC8 /* Pods-CovidMarketPlace.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CovidMarketPlace.release.xcconfig"; path = "Target Support Files/Pods-CovidMarketPlace/Pods-CovidMarketPlace.release.xcconfig"; sourceTree = "<group>"; };
+		E81E0BD82576CB3D000F3F63 /* ProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductView.swift; sourceTree = "<group>"; };
+		E81E0BDB2576CDE4000F3F63 /* productImgCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = productImgCell.swift; sourceTree = "<group>"; };
+		E81E0BDC2576CDE4000F3F63 /* productImgCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = productImgCell.xib; sourceTree = "<group>"; };
+		E81E0BE02576CEC5000F3F63 /* ProductTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTitle.swift; sourceTree = "<group>"; };
+		E81E0BE12576CEC5000F3F63 /* ProductTitle.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductTitle.xib; sourceTree = "<group>"; };
+		E81E0BE52576D517000F3F63 /* ProductPriceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductPriceCell.swift; sourceTree = "<group>"; };
+		E81E0BE62576D517000F3F63 /* ProductPriceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductPriceCell.xib; sourceTree = "<group>"; };
+		E81E0BEA2576D7A0000F3F63 /* ProductDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDescription.swift; sourceTree = "<group>"; };
+		E81E0BEB2576D7A0000F3F63 /* ProductDescription.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductDescription.xib; sourceTree = "<group>"; };
+		E81E0BEF2576E6FE000F3F63 /* ProductSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSelection.swift; sourceTree = "<group>"; };
+		E81E0BF02576E6FE000F3F63 /* ProductSelection.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductSelection.xib; sourceTree = "<group>"; };
 		E823AEC7255EE96A00CEC763 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		E823AECB255EF27700CEC763 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		E823AED5255F0DE200CEC763 /* FavoritesLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesLauncher.swift; sourceTree = "<group>"; };
@@ -551,6 +573,7 @@
 				E8B2C0B22572E34400664ABB /* cells */,
 				E8B2C0B32572E3A900664ABB /* ShopHome.swift */,
 				E85A4B5725740D61006A539B /* ShopHomeDescription.swift */,
+				E81E0BD82576CB3D000F3F63 /* ProductView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -595,6 +618,16 @@
 				E8B2C0C02573CB6600664ABB /* CellHeaderView.swift */,
 				E85A4B5A25740F15006A539B /* ProductsCell.swift */,
 				E85A4B5B25740F15006A539B /* ProductsCell.xib */,
+				E81E0BDB2576CDE4000F3F63 /* productImgCell.swift */,
+				E81E0BDC2576CDE4000F3F63 /* productImgCell.xib */,
+				E81E0BE02576CEC5000F3F63 /* ProductTitle.swift */,
+				E81E0BE12576CEC5000F3F63 /* ProductTitle.xib */,
+				E81E0BE52576D517000F3F63 /* ProductPriceCell.swift */,
+				E81E0BE62576D517000F3F63 /* ProductPriceCell.xib */,
+				E81E0BEA2576D7A0000F3F63 /* ProductDescription.swift */,
+				E81E0BEB2576D7A0000F3F63 /* ProductDescription.xib */,
+				E81E0BEF2576E6FE000F3F63 /* ProductSelection.swift */,
+				E81E0BF02576E6FE000F3F63 /* ProductSelection.xib */,
 			);
 			path = cells;
 			sourceTree = "<group>";
@@ -837,15 +870,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8B2C0BD2573C3F300664ABB /* ShopHomeCell.xib in Resources */,
+				E81E0BDE2576CDE4000F3F63 /* productImgCell.xib in Resources */,
+				E81E0BE32576CEC5000F3F63 /* ProductTitle.xib in Resources */,
 				E85C7A9C2567F4150008BBCA /* GoodSuggestionCell.xib in Resources */,
 				E85A4B5D25740F15006A539B /* ProductsCell.xib in Resources */,
 				E8DFDAEC255B49F00000AAA9 /* LaunchScreen.storyboard in Resources */,
 				E85C7AA12567F9D00008BBCA /* ShopCell.xib in Resources */,
 				E8DFDAE9255B49F00000AAA9 /* Assets.xcassets in Resources */,
 				E85C7A912567F2270008BBCA /* OffersCell.xib in Resources */,
+				E81E0BED2576D7A0000F3F63 /* ProductDescription.xib in Resources */,
+				E81E0BE82576D517000F3F63 /* ProductPriceCell.xib in Resources */,
 				E85C7A972567F35F0008BBCA /* BrandInsightCell.xib in Resources */,
 				E85C7A8C2567F15B0008BBCA /* AdsCell.xib in Resources */,
 				E85C7ACF25683A3A0008BBCA /* GoogleService-Info.plist in Resources */,
+				E81E0BF22576E6FE000F3F63 /* ProductSelection.xib in Resources */,
 				E8DFDAE4255B49EE0000AAA9 /* Main.storyboard in Resources */,
 				E85C7A872567EBD80008BBCA /* CategoryCell.xib in Resources */,
 				E8BE5700256AADEB00147EA5 /* HeaderCell.xib in Resources */,
@@ -903,8 +941,10 @@
 			files = (
 				E8B2C0BC2573C3F300664ABB /* ShopHomeCell.swift in Sources */,
 				E8DFDAE1255B49EE0000AAA9 /* AuthView.swift in Sources */,
+				E81E0BE22576CEC5000F3F63 /* ProductTitle.swift in Sources */,
 				E823AEE6255F0EAC00CEC763 /* FavoriteEmpty.swift in Sources */,
 				E8336DB6255DF260008A8800 /* String+Extensions.swift in Sources */,
+				E81E0BD92576CB3D000F3F63 /* ProductView.swift in Sources */,
 				E85EC17E256708EB00B57732 /* UIImageview+Extensions.swift in Sources */,
 				E8B2C0C52573EC2600664ABB /* ShopCategory.swift in Sources */,
 				E8B2C0B42572E3A900664ABB /* ShopHome.swift in Sources */,
@@ -920,6 +960,7 @@
 				E823AED6255F0DE200CEC763 /* FavoritesLauncher.swift in Sources */,
 				E8DFDB23255C32A10000AAA9 /* PlaceRouter.swift in Sources */,
 				E85C7AC1256814680008BBCA /* AuthPresenter.swift in Sources */,
+				E81E0BDD2576CDE4000F3F63 /* productImgCell.swift in Sources */,
 				E823AEE9255F191000CEC763 /* Favorites.swift in Sources */,
 				E8DFDB18255C10E80000AAA9 /* SMSInteractor.swift in Sources */,
 				E823AEF6255F206800CEC763 /* AccountLauncher.swift in Sources */,
@@ -930,6 +971,7 @@
 				E85C7AB12568128E0008BBCA /* LauncherController.swift in Sources */,
 				E85C7A8B2567F15B0008BBCA /* AdsCell.swift in Sources */,
 				E872DAEA256D8763007903D4 /* SearchPresenter.swift in Sources */,
+				E81E0BEC2576D7A0000F3F63 /* ProductDescription.swift in Sources */,
 				E8DFDB05255BF40A0000AAA9 /* Landings.swift in Sources */,
 				E85C7AA02567F9D00008BBCA /* ShopCell.swift in Sources */,
 				E8336DBF255DF2CB008A8800 /* Merchant.swift in Sources */,
@@ -947,6 +989,7 @@
 				E85C7A862567EBD80008BBCA /* CategoryCell.swift in Sources */,
 				E8336DC5255E085B008A8800 /* Color+Extensions.swift in Sources */,
 				E8DFDB26255C32B50000AAA9 /* Location.swift in Sources */,
+				E81E0BE72576D517000F3F63 /* ProductPriceCell.swift in Sources */,
 				E8DFDADD255B49EE0000AAA9 /* AppDelegate.swift in Sources */,
 				E823AEDA255F0DFC00CEC763 /* FavoritesView.swift in Sources */,
 				E8DFDB34255C50B70000AAA9 /* Utils.swift in Sources */,
@@ -966,6 +1009,7 @@
 				E8DFDB0F255C04E30000AAA9 /* Int+Extensions.swift in Sources */,
 				E85A4B5825740D61006A539B /* ShopHomeDescription.swift in Sources */,
 				E8DFDADF255B49EE0000AAA9 /* SceneDelegate.swift in Sources */,
+				E81E0BF12576E6FE000F3F63 /* ProductSelection.swift in Sources */,
 				E8DFDAE7255B49EE0000AAA9 /* CovidMarketPlace.xcdatamodeld in Sources */,
 				E8B2C0B82572EA7900664ABB /* ShopHomeRouter.swift in Sources */,
 			);

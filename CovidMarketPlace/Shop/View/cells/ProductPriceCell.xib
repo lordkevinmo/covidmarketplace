@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="product-price-cell" id="gTV-IL-0wX" customClass="ProductPriceCell" customModule="CovidMarketPlace" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="521" height="137"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="521" height="137"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mte-9H-yuI">
+                        <rect key="frame" x="0.0" y="0.0" width="521" height="137"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5si-jD-bhX">
+                                <rect key="frame" x="8" y="56" width="52.5" height="25"/>
+                                <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="20"/>
+                                <color key="textColor" systemColor="systemGreenColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cDL-JN-42R">
+                                <rect key="frame" x="76.5" y="56" width="52.5" height="25"/>
+                                <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="20"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hUW-Lw-Qok">
+                                <rect key="frame" x="471" y="58" width="42" height="21"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="hUW-Lw-Qok" secondAttribute="trailing" constant="8" id="G5b-BH-1XY"/>
+                            <constraint firstItem="5si-jD-bhX" firstAttribute="leading" secondItem="mte-9H-yuI" secondAttribute="leading" constant="8" id="GsW-lE-Cw1"/>
+                            <constraint firstItem="cDL-JN-42R" firstAttribute="centerY" secondItem="5si-jD-bhX" secondAttribute="centerY" id="KZd-XH-58f"/>
+                            <constraint firstItem="cDL-JN-42R" firstAttribute="leading" secondItem="5si-jD-bhX" secondAttribute="trailing" constant="16" id="byK-O0-7M6"/>
+                            <constraint firstItem="hUW-Lw-Qok" firstAttribute="centerY" secondItem="mte-9H-yuI" secondAttribute="centerY" id="krb-lO-A3x"/>
+                            <constraint firstItem="5si-jD-bhX" firstAttribute="centerY" secondItem="mte-9H-yuI" secondAttribute="centerY" id="uYo-gE-f5O"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="mte-9H-yuI" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="6P7-Md-RUa"/>
+                <constraint firstAttribute="bottom" secondItem="mte-9H-yuI" secondAttribute="bottom" id="VuK-4z-HFZ"/>
+                <constraint firstItem="mte-9H-yuI" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="WIb-cp-FWQ"/>
+                <constraint firstAttribute="trailing" secondItem="mte-9H-yuI" secondAttribute="trailing" id="p8b-Qo-4NS"/>
+            </constraints>
+            <size key="customSize" width="521" height="137"/>
+            <connections>
+                <outlet property="discountPercent" destination="hUW-Lw-Qok" id="SsK-g8-THX"/>
+                <outlet property="discountPrice" destination="cDL-JN-42R" id="tMG-1Q-CZS"/>
+                <outlet property="price" destination="5si-jD-bhX" id="FCG-Ta-o5I"/>
+            </connections>
+            <point key="canvasLocation" x="245.6521739130435" y="137.61160714285714"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
