@@ -7,21 +7,15 @@
 
 import UIKit
 
-fileprivate let ITEM_IMAGE: [Int] = [0]
-fileprivate let ITEM_TITLE: [Int] = [1]
-fileprivate let ITEM_PRICE: [Int] = [2]
-fileprivate let ITEM_DESCRIPTION: [Int] = [3]
-
 class ProductView: UIViewController {
     @IBOutlet weak var addToCartBtn: UIButton!
     @IBOutlet weak var container: UIView!
     
     static let storyboardID = "product-details-view"
     
-    var collectionView: UICollectionView! = nil
-
     override func viewDidLoad() {
         super.viewDidLoad()
+        configHierarchy()
     }
 
     @IBAction func addToCart(_ sender: UIButton) {
@@ -31,6 +25,11 @@ class ProductView: UIViewController {
 // MARK: Methods
 extension ProductView {
     private func configHierarchy() {
-        
+        let pInfos = ProductInfosRouter.assembleModule()
+        let pView = pInfos.view!
+        addChild(pInfos)
+        container.addSubview(pView)
+        pView.frame = container.bounds
+        pInfos.didMove(toParent: self)
     }
 }

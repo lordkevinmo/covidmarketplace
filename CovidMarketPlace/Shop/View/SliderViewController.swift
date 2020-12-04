@@ -10,11 +10,11 @@ import UIKit
 class SliderViewController: UIViewController {
     var sliderImage: UIImageView!
     
-    var image: UIImage?
+    var image: String?
     
     var index: Int
     
-    init(with img: UIImage! = nil, idx: Int) {
+    init(with img: String! = nil, idx: Int) {
         self.image = img
         self.index = idx
         
@@ -27,7 +27,30 @@ class SliderViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        configVC()
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        populateView()
+    }
+}
+
+// MARK: - Methods
+extension SliderViewController {
+    private func configVC() {
+        view.backgroundColor = .systemBackground
+        sliderImage = UIImageView()
+        sliderImage.contentMode = .scaleAspectFill
+        sliderImage.image = UIColor(named: "AccentColor")!.image()
+        view.addSubview(sliderImage)
+        sliderImage.frame = view.bounds
+        sliderImage.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+    }
+    
+    private func populateView() {
+        if let img = image {
+            sliderImage.image = UIImage(named: img)
+        }
+    }
 }
