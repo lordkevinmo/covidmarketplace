@@ -22,3 +22,15 @@ class ShopHomeRouter: NSObject, ShopHomeRouterInput {
         return view
     }
 }
+
+class ProductViewRouter: NSObject, ShopHomeRouterInput {
+    var viewController: UIViewController?
+    
+    static func assembleModule() -> UIViewController {
+        let view = storyBoard.instantiateViewController(
+            withIdentifier: ProductView.storyboardID) as! ProductView
+        return view
+    }
+    
+    
+}

@@ -61,6 +61,7 @@ extension ShopHomeDescription {
             forCellWithReuseIdentifier: ProductsCell.reuseIdentifier
         )
         view.addSubview(collectionView)
+        collectionView.delegate = self
     }
     
     func configureDataSource() {
@@ -84,5 +85,11 @@ extension ShopHomeDescription {
         snapshot.appendSections([.main])
         snapshot.appendItems(products)
         dataSource.apply(snapshot, animatingDifferences: false)
+    }
+}
+
+extension ShopHomeDescription: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        navigationController?.pushViewController(ProductViewRouter.assembleModule(), animated: true)
     }
 }
