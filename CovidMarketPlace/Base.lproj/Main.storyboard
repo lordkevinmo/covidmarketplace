@@ -525,6 +525,147 @@
             </objects>
             <point key="canvasLocation" x="5866.666666666667" y="-607.36607142857144"/>
         </scene>
+        <!--Product Infos-->
+        <scene sceneID="R3m-Eh-jw8">
+            <objects>
+                <viewController storyboardIdentifier="product-infos" id="c6C-Yk-lhN" customClass="ProductInfos" customModule="CovidMarketPlace" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="esJ-ze-eH1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jSw-Zo-CWU">
+                                <rect key="frame" x="0.0" y="44" width="414" height="1156"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="grF-X9-SiQ" userLabel="contentView">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aqr-2h-pve" userLabel="imageSlider">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="300" id="a6w-kD-mmg"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rfc-nN-7Au" userLabel="productTitle">
+                                                <rect key="frame" x="8" y="324" width="398" height="29.5"/>
+                                                <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="24"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- 78 %" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V88-zF-A96" userLabel="discount">
+                                                <rect key="frame" x="346.5" y="361.5" width="59.5" height="25"/>
+                                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="20"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1n1-SV-f83" userLabel="price">
+                                                <rect key="frame" x="8" y="394.5" width="398" height="29.5"/>
+                                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="24"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YuB-0v-aZK" userLabel="crossedPrice">
+                                                <rect key="frame" x="8" y="432" width="398" height="21"/>
+                                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u2I-HB-6oM" userLabel="paymentInfos">
+                                                <rect key="frame" x="8" y="477" width="398" height="25"/>
+                                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YZO-yK-2a9" userLabel="paymentDetails">
+                                                <rect key="frame" x="8" y="510" width="398" height="21"/>
+                                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wo7-DO-cT9" userLabel="description">
+                                                <rect key="frame" x="8" y="555" width="382" height="25"/>
+                                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VDF-I0-7Mg" userLabel="descriptionContent">
+                                                <rect key="frame" x="8" y="588" width="398" height="20"/>
+                                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="YuB-0v-aZK" secondAttribute="trailing" constant="8" id="3Cg-sk-oCZ"/>
+                                            <constraint firstAttribute="trailing" secondItem="rfc-nN-7Au" secondAttribute="trailing" constant="8" id="50t-Dr-DK0"/>
+                                            <constraint firstItem="VDF-I0-7Mg" firstAttribute="leading" secondItem="grF-X9-SiQ" secondAttribute="leading" constant="8" id="5cE-xd-gau"/>
+                                            <constraint firstItem="u2I-HB-6oM" firstAttribute="top" secondItem="YuB-0v-aZK" secondAttribute="bottom" constant="24" id="7Th-NS-ClP"/>
+                                            <constraint firstItem="Aqr-2h-pve" firstAttribute="leading" secondItem="grF-X9-SiQ" secondAttribute="leading" id="Ckg-ps-uPJ"/>
+                                            <constraint firstAttribute="trailing" secondItem="Wo7-DO-cT9" secondAttribute="trailing" constant="24" id="HDd-vP-blr"/>
+                                            <constraint firstItem="YZO-yK-2a9" firstAttribute="top" secondItem="u2I-HB-6oM" secondAttribute="bottom" constant="8" symbolic="YES" id="Ken-r3-ZOz"/>
+                                            <constraint firstItem="YuB-0v-aZK" firstAttribute="top" secondItem="1n1-SV-f83" secondAttribute="bottom" constant="8" symbolic="YES" id="KsQ-s8-vPZ"/>
+                                            <constraint firstAttribute="trailing" secondItem="YZO-yK-2a9" secondAttribute="trailing" constant="8" id="Pmj-Lw-dSP"/>
+                                            <constraint firstAttribute="trailing" secondItem="u2I-HB-6oM" secondAttribute="trailing" constant="8" id="SDO-xr-JrQ"/>
+                                            <constraint firstAttribute="trailing" secondItem="V88-zF-A96" secondAttribute="trailing" constant="8" id="Vyc-eZ-yJy"/>
+                                            <constraint firstItem="YuB-0v-aZK" firstAttribute="leading" secondItem="grF-X9-SiQ" secondAttribute="leading" constant="8" id="Y8P-99-a5Y"/>
+                                            <constraint firstItem="VDF-I0-7Mg" firstAttribute="top" secondItem="Wo7-DO-cT9" secondAttribute="bottom" constant="8" id="YoY-PZ-P9z"/>
+                                            <constraint firstAttribute="trailing" secondItem="1n1-SV-f83" secondAttribute="trailing" constant="8" id="a97-CQ-c9f"/>
+                                            <constraint firstItem="1n1-SV-f83" firstAttribute="top" secondItem="V88-zF-A96" secondAttribute="bottom" constant="8" id="bdZ-LP-rG8"/>
+                                            <constraint firstItem="V88-zF-A96" firstAttribute="top" secondItem="rfc-nN-7Au" secondAttribute="bottom" constant="8" id="cNx-Te-6fd"/>
+                                            <constraint firstItem="Wo7-DO-cT9" firstAttribute="top" secondItem="YZO-yK-2a9" secondAttribute="bottom" constant="24" id="duG-eo-sN4"/>
+                                            <constraint firstItem="V88-zF-A96" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="grF-X9-SiQ" secondAttribute="leading" constant="20" symbolic="YES" id="dzm-4C-zYb"/>
+                                            <constraint firstAttribute="trailing" secondItem="VDF-I0-7Mg" secondAttribute="trailing" constant="8" id="f9S-gr-nMN"/>
+                                            <constraint firstItem="Aqr-2h-pve" firstAttribute="top" secondItem="grF-X9-SiQ" secondAttribute="top" id="gf5-ff-zxo"/>
+                                            <constraint firstItem="rfc-nN-7Au" firstAttribute="top" secondItem="Aqr-2h-pve" secondAttribute="bottom" constant="24" id="hbW-Qm-oiI"/>
+                                            <constraint firstItem="YZO-yK-2a9" firstAttribute="leading" secondItem="grF-X9-SiQ" secondAttribute="leading" constant="8" id="iYe-ea-RHF"/>
+                                            <constraint firstAttribute="height" constant="1200" id="krb-xN-Ccy"/>
+                                            <constraint firstItem="rfc-nN-7Au" firstAttribute="leading" secondItem="grF-X9-SiQ" secondAttribute="leading" constant="8" id="o9C-oE-ZgS"/>
+                                            <constraint firstItem="1n1-SV-f83" firstAttribute="leading" secondItem="grF-X9-SiQ" secondAttribute="leading" constant="8" id="qAY-mA-DIP"/>
+                                            <constraint firstAttribute="trailing" secondItem="Aqr-2h-pve" secondAttribute="trailing" id="v34-Bx-bGz"/>
+                                            <constraint firstItem="Wo7-DO-cT9" firstAttribute="leading" secondItem="grF-X9-SiQ" secondAttribute="leading" constant="8" id="v6j-zP-8BJ"/>
+                                            <constraint firstItem="u2I-HB-6oM" firstAttribute="leading" secondItem="grF-X9-SiQ" secondAttribute="leading" constant="8" id="wqz-5y-tx4"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="grF-X9-SiQ" secondAttribute="trailing" id="1rS-Hb-WBh"/>
+                                    <constraint firstItem="grF-X9-SiQ" firstAttribute="top" secondItem="jSw-Zo-CWU" secondAttribute="top" id="5mg-Qu-BbA"/>
+                                    <constraint firstItem="grF-X9-SiQ" firstAttribute="leading" secondItem="jSw-Zo-CWU" secondAttribute="leading" id="BzK-EM-sBf"/>
+                                    <constraint firstAttribute="bottom" secondItem="grF-X9-SiQ" secondAttribute="bottom" id="VNQ-9t-xDX"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3jw-F2-s4B"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jSw-Zo-CWU" firstAttribute="top" secondItem="3jw-F2-s4B" secondAttribute="top" id="Ww4-a1-cF6"/>
+                            <constraint firstAttribute="bottom" secondItem="jSw-Zo-CWU" secondAttribute="bottom" id="Z67-3F-tSi"/>
+                            <constraint firstItem="jSw-Zo-CWU" firstAttribute="trailing" secondItem="3jw-F2-s4B" secondAttribute="trailing" id="eHb-pn-mnQ"/>
+                            <constraint firstItem="grF-X9-SiQ" firstAttribute="width" secondItem="esJ-ze-eH1" secondAttribute="width" id="g9s-lw-xUv"/>
+                            <constraint firstItem="jSw-Zo-CWU" firstAttribute="leading" secondItem="3jw-F2-s4B" secondAttribute="leading" id="oCy-6t-bqa"/>
+                        </constraints>
+                    </view>
+                    <size key="freeformSize" width="414" height="1200"/>
+                    <connections>
+                        <outlet property="contentview" destination="grF-X9-SiQ" id="3el-YG-V5n"/>
+                        <outlet property="crossedPrice" destination="YuB-0v-aZK" id="AF9-2f-1OB"/>
+                        <outlet property="descriptionContent" destination="VDF-I0-7Mg" id="1if-mE-miY"/>
+                        <outlet property="descriptionTitle" destination="Wo7-DO-cT9" id="wW3-d9-GIK"/>
+                        <outlet property="discount" destination="V88-zF-A96" id="aa3-d0-TTg"/>
+                        <outlet property="displayedPrice" destination="1n1-SV-f83" id="87z-Hq-klG"/>
+                        <outlet property="imgSlider" destination="Aqr-2h-pve" id="TR7-O5-f2G"/>
+                        <outlet property="paymentInfos" destination="YZO-yK-2a9" id="UfK-wa-cEI"/>
+                        <outlet property="paymentInfosTitle" destination="u2I-HB-6oM" id="DRw-yC-9Av"/>
+                        <outlet property="productTitle" destination="rfc-nN-7Au" id="eFe-E1-bcC"/>
+                        <outlet property="scrollview" destination="jSw-Zo-CWU" id="Fhe-yk-GLt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PZt-QD-Qgb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6720" y="-506"/>
+        </scene>
         <!--Search View-->
         <scene sceneID="NHV-ag-zRm">
             <objects>
@@ -738,6 +879,9 @@
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
