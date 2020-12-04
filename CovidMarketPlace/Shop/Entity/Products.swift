@@ -28,6 +28,17 @@ extension Product: Hashable {
     }
 }
 
+struct ProductGallery {
+    let id = UUID()
+    let image: String?
+}
+
+let productGallery: [ProductGallery] = [
+    ProductGallery(image: "vegetables"),
+    ProductGallery(image: "pasta"),
+    ProductGallery(image: "food")
+]
+
 let products : [Product] = [
     Product(
         productName: "Chemise - logo brodé", productDetails: "Lacoste",
