@@ -666,6 +666,104 @@
             </objects>
             <point key="canvasLocation" x="6720" y="-506"/>
         </scene>
+        <!--Cart Preview-->
+        <scene sceneID="7zT-Gq-OT7">
+            <objects>
+                <viewController storyboardIdentifier="cart-preview" id="35q-me-Ppk" customClass="CartPreview" customModule="CovidMarketPlace" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="u4f-2G-RnO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ILO-gf-7Bg">
+                                <rect key="frame" x="24" y="814" width="366" height="48"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="DRd-ND-DGT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="20"/>
+                                <state key="normal" title="Add to cart">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="addToCart:" destination="35q-me-Ppk" eventType="touchUpInside" id="XBZ-Ex-E8v"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="po7-za-Rcj">
+                                <rect key="frame" x="8" y="44" width="398" height="25"/>
+                                <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="20"/>
+                                <color key="textColor" systemColor="systemGreenColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vZr-1h-O7r">
+                                <rect key="frame" x="8" y="77" width="398" height="64"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jv9-v4-XUW">
+                                        <rect key="frame" x="16" y="19.5" width="49" height="25"/>
+                                        <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="755" verticalHuggingPriority="751" horizontalCompressionResistancePriority="755" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="2FK-pE-qOY">
+                                        <rect key="frame" x="268.5" y="16" width="94" height="32"/>
+                                        <connections>
+                                            <action selector="quantityDidChanged:" destination="35q-me-Ppk" eventType="valueChanged" id="UZO-Wi-bRb"/>
+                                        </connections>
+                                    </stepper>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="255" verticalHuggingPriority="251" horizontalCompressionResistancePriority="755" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vYr-ja-4Xv">
+                                        <rect key="frame" x="378.5" y="19.5" width="11.5" height="25"/>
+                                        <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="jv9-v4-XUW" firstAttribute="leading" secondItem="vZr-1h-O7r" secondAttribute="leading" constant="16" id="100-Dh-GZA"/>
+                                    <constraint firstAttribute="trailing" secondItem="vYr-ja-4Xv" secondAttribute="trailing" constant="8" id="3hY-SA-4wk"/>
+                                    <constraint firstItem="jv9-v4-XUW" firstAttribute="centerY" secondItem="vZr-1h-O7r" secondAttribute="centerY" id="6sM-e4-mUW"/>
+                                    <constraint firstItem="vYr-ja-4Xv" firstAttribute="centerY" secondItem="vZr-1h-O7r" secondAttribute="centerY" id="A5z-En-bqh"/>
+                                    <constraint firstItem="2FK-pE-qOY" firstAttribute="centerY" secondItem="vZr-1h-O7r" secondAttribute="centerY" id="ahv-N7-dTr"/>
+                                    <constraint firstItem="vYr-ja-4Xv" firstAttribute="leading" secondItem="2FK-pE-qOY" secondAttribute="trailing" constant="16" id="gtS-wL-gjb"/>
+                                    <constraint firstItem="2FK-pE-qOY" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="jv9-v4-XUW" secondAttribute="trailing" constant="8" symbolic="YES" id="p62-fR-0gJ"/>
+                                    <constraint firstAttribute="height" constant="64" id="sfr-tr-4zG"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uwg-Fa-Dsw">
+                                <rect key="frame" x="8" y="165" width="398" height="625"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kkh-k8-hkh"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <constraints>
+                            <constraint firstItem="vZr-1h-O7r" firstAttribute="top" secondItem="po7-za-Rcj" secondAttribute="bottom" constant="8" symbolic="YES" id="2KR-tS-4uC"/>
+                            <constraint firstItem="ILO-gf-7Bg" firstAttribute="top" secondItem="Uwg-Fa-Dsw" secondAttribute="bottom" constant="24" id="2lB-6o-G2u"/>
+                            <constraint firstItem="vZr-1h-O7r" firstAttribute="leading" secondItem="kkh-k8-hkh" secondAttribute="leading" constant="8" id="5Kg-f3-9Lp"/>
+                            <constraint firstItem="Uwg-Fa-Dsw" firstAttribute="top" secondItem="vZr-1h-O7r" secondAttribute="bottom" constant="24" id="FHx-8j-QOQ"/>
+                            <constraint firstItem="po7-za-Rcj" firstAttribute="leading" secondItem="kkh-k8-hkh" secondAttribute="leading" constant="8" id="Jje-J2-bAz"/>
+                            <constraint firstItem="ILO-gf-7Bg" firstAttribute="leading" secondItem="kkh-k8-hkh" secondAttribute="leading" constant="24" id="QGA-Qg-75i"/>
+                            <constraint firstItem="kkh-k8-hkh" firstAttribute="trailing" secondItem="Uwg-Fa-Dsw" secondAttribute="trailing" constant="8" id="Umm-HO-09u"/>
+                            <constraint firstItem="kkh-k8-hkh" firstAttribute="trailing" secondItem="vZr-1h-O7r" secondAttribute="trailing" constant="8" id="VtL-7Q-dfL"/>
+                            <constraint firstItem="ILO-gf-7Bg" firstAttribute="bottom" secondItem="kkh-k8-hkh" secondAttribute="bottom" id="ZZ2-67-Cgy"/>
+                            <constraint firstItem="kkh-k8-hkh" firstAttribute="trailing" secondItem="po7-za-Rcj" secondAttribute="trailing" constant="8" id="eHX-9g-TE4"/>
+                            <constraint firstItem="po7-za-Rcj" firstAttribute="top" secondItem="kkh-k8-hkh" secondAttribute="top" id="h5k-KB-txE"/>
+                            <constraint firstItem="kkh-k8-hkh" firstAttribute="trailing" secondItem="ILO-gf-7Bg" secondAttribute="trailing" constant="24" id="s8J-ma-yxe"/>
+                            <constraint firstItem="Uwg-Fa-Dsw" firstAttribute="leading" secondItem="kkh-k8-hkh" secondAttribute="leading" constant="8" id="vN7-j2-xVm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addcartBtn" destination="ILO-gf-7Bg" id="7Et-Ro-bfN"/>
+                        <outlet property="container" destination="Uwg-Fa-Dsw" id="gUn-cA-f3C"/>
+                        <outlet property="previewTitle" destination="po7-za-Rcj" id="EQb-TP-zdz"/>
+                        <outlet property="quantity" destination="vYr-ja-4Xv" id="OE8-Hl-Vzo"/>
+                        <outlet property="quantityTitle" destination="jv9-v4-XUW" id="Pob-WO-noF"/>
+                        <outlet property="stepper" destination="2FK-pE-qOY" id="PoJ-Vn-zw6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v6k-Wi-Brv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7518.8405797101459" y="-607.36607142857144"/>
+        </scene>
         <!--Search View-->
         <scene sceneID="NHV-ag-zRm">
             <objects>
@@ -876,6 +974,9 @@
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
