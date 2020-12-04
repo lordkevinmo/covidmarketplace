@@ -19,6 +19,8 @@ class ProductView: UIViewController {
     }
 
     @IBAction func addToCart(_ sender: UIButton) {
+        navigationController?.pushViewController(
+            CartPreviewRouter.assembleModule(), animated: true)
     }
 }
 
