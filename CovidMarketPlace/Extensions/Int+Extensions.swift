@@ -18,6 +18,7 @@ extension Int {
     static let ACCOUNTBAR = 2
 }
 
+// Int + Seconds in countdown screen for 1 mn
 extension UInt8 {
     static let MAX_TIME: UInt8 = 59
 }
