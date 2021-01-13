@@ -28,6 +28,8 @@ class AuthView: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.viewDidLoad()
+        phoneTxtField.delegate = self
+        phoneTxtField.becomeFirstResponder()
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -71,6 +73,24 @@ extension AuthView {
         }
         
         presenter.requestAuth(for: number)
+    }
+    
+    private func subscribeNotification(_ notification: NSNotification.Name, selector: Selector) {
+        NotificationCenter.default.addObserver(self, selector: selector, name: notification, object: nil)
+    }
+    
+    private func unscribeNotification() {
+        NotificationCenter.default.removeObserver(self)
+    }
+}
+
+extension AuthView: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField === phoneTxtField {
+            view.endEditing(true)
+            return true
+        }
+        return false
     }
 }
 
